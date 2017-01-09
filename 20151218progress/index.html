@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>交易明细</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<style>
+html{font-family:"Helvetica Neue","Microsoft Yahei",Helvetica,STHeiti,Arial,sans-serif;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;background:#f4f5f0;}
+body{margin:0;}
+ul,li{list-style:none;}
+ul,p{margin:0;padding:0;}
+.page{overflow:hidden;margin:0 auto;width:100%;max-width:750px;min-width:320px;background:#f4f5f0;}
+.page .progress{overflow:hidden;background:#f4f5f0;}
+.page .progress-bar{width:10%;float:left;margin-top:32px;}
+.page .progress-bar li{position:relative;border-right:4px solid #b7b7b7;height:90px;} 
+.page .progress-bar li:nth-child(1){height:0;}
+.page .progress-bar li i{position:absolute;bottom:-8px;right:-10px;width:16px;height:16px;border-radius:8px;background:#b7b7b7;z-index:100;}
+.page .progress-bar li:nth-child(1) i{background:#ff782e;}
+.page .progress-info{width:82%;overflow:hidden;float:right;}
+.page .progress-info li{width:100%;height:70px;border-bottom:1px solid #a3a3a3;color:#959595;}
+.page .progress .title{font-size:18px;height:28px;line-height:28px;margin-top:18px;}
+.page .progress .time{font-size:14px;height:20px;line-height:20px;margin-bottom:15px;}
+/*进度1*/
+.page .progress1 .progress-info li:nth-child(1) .title{color:#ff782e;}
+/*进度2*/
+.page .progress2 .progress-bar li:nth-child(2){border-right:4px solid #ff782e;}
+.page .progress2 .progress-bar li:nth-child(2) i{background:#ff782e;}
+.page .progress2 .progress-info li:nth-child(1) .title{color:#434241;}
+.page .progress2 .progress-info li:nth-child(2) .title{color:#ff782e;}
+/*进度3*/
+.page .progress3 .progress-bar li:nth-child(2),.page .progress3 .progress-bar li:nth-child(3){border-right:4px solid #ff782e;}
+.page .progress3 .progress-bar li:nth-child(2) i,.page .progress3 .progress-bar li:nth-child(3) i{background:#ff782e;}
+.page .progress3 .progress-info li:nth-child(1) .title,.page .progress3 .progress-info li:nth-child(2) .title{color:#434241;}
+.page .progress3 .progress-info li:nth-child(3) .title{color:#ff782e;}
+/*进度4*/
+.page .progress4 .progress-bar li{border-right:4px solid #ff782e;}
+.page .progress4 .progress-bar li i{background:#ff782e;}
+.page .progress4 .progress-info li:nth-child(1) .title,.page .progress4 .progress-info li:nth-child(2) .title,.page .progress4 .progress-info li:nth-child(3) .title{color:#434241;}
+.page .progress4 .progress-info li:nth-child(4) .title{color:#ff782e;}
+</style>
+</head> 
+<body> 
+<div class="page">
+	<div class="progress progress1">
+		<ul class="progress-bar">
+			<li><i></i></li>
+			<li><i></i></li>
+			<li><i></i></li>
+			<li><i></i></li>	
+		</ul>
+		<ul class="progress-info">
+			<li>
+				<p class="title">募集期</p>
+				<p class="time">2015-12-03至2015-12-05</p>
+			</li>
+			<li>
+				<p class="title">理财中</p>
+				<p class="time">2015-12-06至2015-12-25</p>
+			</li>
+			<li>
+				<p class="title">划款中</p>
+				<p class="time">2015-12-26至2015-12-28</p>
+			</li>
+			<li>
+				<p class="title">划款成功</p>
+				<p class="time">2015-12-30</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<script src="http://file2.ci123.com/ast/js/zepto.js"></script> 
+</body> 
+</html>

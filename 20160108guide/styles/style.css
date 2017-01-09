@@ -1,0 +1,118 @@
+@charset "utf-8";
+html{font-size:62.5%;font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{-webkit-overflow-scrolling:touch;margin:0;}
+ul{margin:0;padding:0;list-style:none;outline:none;}
+dl,dd{margin:0;}
+a,img,input,button,div,li,span{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;}
+a{display:inline-block;margin:0;padding:0;text-decoration:none;background:transparent;outline:none;color:#000;}
+a:link,a:visited,a:hover,a:active{text-decoration:none;color:currentColor;}
+img{border:0;}
+p{margin: 0;}
+input,button,select{margin:0;padding:0;border:0;outline:0;background:transparent;-webkit-appearance:none;}
+/*页面主体*/
+body{background:#f3f3f3;}
+body.wrapper-bgcolor{background:#fff;}
+.wrapper{position:relative;margin:0 auto;width:100%;max-width:75.0rem;}
+.wrapper img{display:block;width:100%;}
+.icon-back,
+.icon-share,
+.icon-arrow{display:inline-block;background:url(images/part-icon.png) no-repeat;background-size:26.5rem;}
+/**********公共头部**********/
+.wrapper-header{margin:0 auto;width:100%;max-width:75.0rem;}
+.wrapper-header:after{content:'';display:block;height:4.0rem;}
+.wrapper-hd{position:fixed;top:0;width:100%;max-width:75.0rem;height:4.0rem;line-height:4.0rem;text-align:center;background:#3dcca4;z-index:999;}
+.wrapper-hd .hd-title{margin:0 4.5rem;font-size:1.7rem;font-family:Arial,"Microsoft Yahei";color:#fff;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.wrapper-hd .hd-left,.wrapper-hd .hd-right{display:block;padding:0.5rem;width:3.0rem;height:3.0rem;}
+.wrapper-hd .hd-left{float:left;margin-left:0.5rem;}
+.wrapper-hd .hd-right{float:right;margin-right:0.5rem;}
+.wrapper-hd .icon-back{width:3.0rem;height:3.0rem;background-position:0 -4.7rem;}
+/**********公共弹出框蒙层**********/
+.wrapper .part-layer{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.5);z-index:999;display:none;}
+.wrapper .part-mask{position:fixed;top:50%;left:50%;overflow:hidden;background:#fff;z-index:10000;border-radius:5px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);display:none;}
+
+/*公共产品列表样式*/
+.wrapper .product-item{padding: 0 1.2rem;background:#fff;}
+.wrapper .product-item .product-list{position:relative;overflow:hidden;padding:1.5rem 0;border-bottom:1px solid #e6e6e6;}
+.wrapper .product-item .product-list:last-child{border-bottom: 0;}
+.wrapper .product-item .product-list .product-pic{float:left;width:11.0rem;}
+.wrapper .product-item .product-list .product-info{position:relative;margin:0 1.5rem 0 12.2rem;min-height:8.0rem;}
+.wrapper .product-item .product-list .product-title{margin-bottom:0.5rem;font-size:1.5rem;color:#333;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.wrapper .product-item .product-list .product-text{font-size:1.2rem;line-height:1.5;color:#666;}
+.wrapper .product-item .product-list .product-subtext{position: absolute;bottom: 0;left: 0;width: 100%;font-size:1.2rem;color:#999;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.wrapper .product-item .product-list .icon-arrow{position:absolute;top:50%;right:0;width:0.8rem;height:1.3rem;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);background-position: -13.0rem -4.5rem;}
+
+/*滑动导航公共样式*/
+.wrapper .nav-switch:after{content:'';display:block;margin-bottom:1.0rem;height:4.4rem;}
+.wrapper .switch-box{display: none;}
+.wrapper .nav-slide{
+	position: fixed;
+	top: 4.2rem;
+	overflow: hidden;
+	border-bottom:1px solid #e6e6e6;
+	width: 100%;
+	max-width: 75.0rem;
+	height: 4.4rem;
+	background: #fff;
+	z-index: 9;
+}
+.wrapper .nav-slide .nav-item{
+	margin-right: -1.0rem;
+    padding: 1.0rem 0;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 0;
+    white-space: nowrap;
+    background: #fff;
+}
+.wrapper .nav-slide li{
+	position: relative;
+	display: inline-block;
+    padding: 0 .5rem;
+    min-width: 6.0rem;
+    border-right:1px solid #e6e6e6;
+	font-size: 1.4rem;
+    text-align: center;
+	color: #666;
+}
+.wrapper .nav-slide li:last-child{border-right: 0;}
+.wrapper .nav-slide li.case{color: #3dcca4;}
+
+
+/**********首页-今日关注**********/
+.guide-index .index-header,.guide-index .index-subtitle,.guide-index .index-content{margin-left:2.7rem;margin-right:1.2rem;}
+.guide-index .index-header{height:2.0rem;border-left:0.2rem solid #aaa;}
+.guide-index .index-title{margin-left:1.2rem;font-size:1.8rem;color:#333;}
+.guide-index .index-title .index-month{margin-left:0.5rem;font-size:1.2rem;}
+.guide-index .index-subtitle{position:relative;padding-left:1.0rem;width:9.5rem;height:2.6rem;line-height:2.6rem;background:#3dcca4;color:#fff;font-size:1.4rem;}
+.guide-index .subtitle-icon{position:absolute;right:-2.6rem;top:0;width:5.2rem;height:2.6rem;border-radius:0 50% 50% 0;background:#3dcca4;z-index:-100;}
+.guide-index .index-content{border-left:0.2rem solid #aaa;padding-top:1.2rem;padding-bottom:2.0rem;}
+.guide-index .index-content .index-text{background:#fff;padding:1.2rem;font-size:1.4rem;color:#333;line-height:2.0rem;}
+.guide-index .index-today{position:fixed;right:1.2rem;bottom:0.5rem;width:4.0rem;height:4.0rem;background:url(images/part-icon.png) no-repeat;background-size:26.5rem;background-position:0 0;}
+
+
+/**********每日知识**********/
+.daily-know{width:100%;}
+.daily-know .know-part{background:#fff;margin-top:1.0rem;}
+.daily-know .know-date,.daily-know .know-list li{height:4.4rem;line-height:4.4rem;border-bottom:0.1rem solid #e6e6e6;}
+.daily-know .know-date{padding-left:1.5rem;color:#3dcca4;font-size:1.6rem;}
+.daily-know .know-list{padding-left:1.5rem;padding-right:1.5rem;}
+.daily-know .know-list li{color:#333;font-size:1.5rem;}
+.daily-know .know-list li:last-child{border-bottom:0;}
+.daily-know .know-list .know-icon{display:inline-block;margin-right:0.8rem;width:0.4rem;height:0.4rem;border-radius:0.2rem;background:#ccc;vertical-align:middle;}
+
+
+/**********亲子游戏-详情**********/
+.game-detail{padding-bottom:7.0rem;}
+.game-detail .game-part{padding-left:1.2rem;padding-right:1.2rem;border-bottom:0.1rem solid #e6e6e6;}
+.game-detail .last-part{border-bottom:0;}
+.game-detail .game-part .game-title{margin-top:1.7rem;margin-bottom:1.0rem;font-size:1.6rem;color:#3dcca4;}
+.game-detail .game-part .game-content{margin-bottom:1.6rem;font-size:1.5rem;color:#333;line-height:2.0rem;}
+.game-detail .game-part .game-content li{margin-bottom:0.8rem;}
+
+/**********育儿百科**********/
+.educate-baike .baike-header{height:4.4rem;border-bottom:0.1rem solid #ddd;}
+.educate-baike .daily-know .check-all{text-align:center;height:3.5rem;line-height:3.5rem;color:#999;font-size:1.2rem;cursor:pointer;}
+.educate-baike .daily-know .check-all .check-icon{display:inline-block;width:1.1rem;height:0.6rem;background:url(images/part-icon.png) no-repeat;background-size:26.5rem;background-position:-13.0rem -6.3rem;margin-left:0.7rem;}
+.educate-baike .daily-know .know-list .on{display:block;}
+.educate-baike .daily-know .know-list .off{display:none;}
+

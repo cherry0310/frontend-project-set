@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>拆红包</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link  href="styles/style.css" rel="stylesheet">
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script type="text/javascript">
+function openBag(){
+	$("#header2 img").attr("src","styles/images/opened_header2.jpg");
+	$("#bag_money").css("display","block");
+	$("#opened_content").css({"display":"block","margin-top":"50%"});
+	document.getElementById("header2").onclick = function(){}
+}
+function shareBag(){
+	$("#header2 img").attr("src","styles/images/shared_header2.jpg");
+	$("#bag_money").html("16.2元");//改变中奖金额
+	$("#opened_content").css("display","none");
+	$("#shared_content").css({"display":"block","margin-top":"50%"});
+	$(".line1").css("margin-bottom","10px");	
+}
+//popup
+function popup(){
+	var loc=$('#main');
+	var div_width=loc.width();
+	var div_height=loc.height();
+	var div_left=loc.offset().left;
+	var div_top=loc.offset().top;
+	//popup_back setPosition
+	var pop_back=$('#popup_back');
+	pop_back.css("left",div_left);
+	pop_back.css("top",div_top);
+	pop_back.css("width",div_width);
+	pop_back.css("height",div_height);
+	pop_back.css("display","block");
+	pop_back.css({"position":"absolute","z-index":"1000","background-color":"#000","opacity":"0.5","filter":"alpha(opacity=50)"});	
+	//popup_content setPosition
+	var pop_content=$('#popup_content');
+	pop_content.css("left",div_left+div_width*0.10);
+	pop_content.css("top",110);
+	pop_content.css("width",div_width*0.80);
+	pop_content.css("display","block");	
+}
+//close popup
+function makeSure(){
+	$('#popup_back').css("display","none");	
+	$('#popup_content').css("display","none");	
+}
+</script>
+</head>
+<body>
+	<div class="main open_main" id="main">		
+		<div class="header1"><img src="styles/images/header1.jpg" /></div>
+		<div class="header2" onclick="openBag();" id="header2"><img src="styles/images/header2.jpg" /></div>
+		<div class="header3"><img src="styles/images/header3.jpg" /></div>	
+		
+		<p class="bag_money" id="bag_money" style="display:none;">8.2元</p>		
+		<div class="opened_content"  id="opened_content" style="display:none;">
+			<form>
+				<p class="info"><label class="words">请输入手机号：</label><input type="text" class="telephone"/></p>
+			</form>
+			<ul class="navs">
+				<li><a class="nav" onclick="shareBag();">分享加倍</a></li>
+				<li><a class="nav" href="#">不加倍 立即使用</a></li>
+			</ul><!--end navs-->	
+			<p class="line"><a class="rule" onclick="popup();" href="#">活动规则</a></p>
+		</div><!--end opened_content-->
+		<div class="shared_content"  id="shared_content" style="display:none;">
+			<form>
+				<p class="info"><label class="words">请输入手机号：</label><input type="text" class="telephone"/></p>
+			</form>
+			<p class="line1"><a class="use_now" href="#">立即使用</a></p>
+			<p class="line2">使用红包还可获得妈妈购88元优惠券哦！</p>
+			<p class="line3"><a class="rule" onclick="popup();" href="#">活动规则</a></p>
+		</div><!--end shared_content-->		
+		<div class="content">
+			<p class="title"><img src="styles/images/dash.png" class="dash left_dash"/>关于妈咪钱包<img src="styles/images/dash.png" class="dash right_dash"/></p>
+			<p>聪明妈妈的生活法宝，消费理财两不误，给宝宝更好的生活！</p>
+			<ul>
+				<li>
+					<p class="li_title"><img src="styles/images/icon.png" />亲亲宝</p>
+					<p>灵活存取，每日看收益</p>
+				</li>
+				<li>
+					<p class="li_title"><img src="styles/images/icon.png" />妥妥宝</p>
+					<p>稳健收益，本息有保障</p>
+				</li>
+				<li>
+					<p class="li_title"><img src="styles/images/icon.png" />安全保障</p>
+					<p>平安银行全程资金监管，为您保驾护航</p>
+				</li>
+			</ul>	
+		</div><!--end content-->
+	</div><!--end open_main-->
+	<div class="popup_back" id="popup_back" style="display:none;" onclick="makeSure();"></div>
+	<div class="popup_content" id="popup_content" style="display:none;">
+		<p>1. 活动时间：8.20-8.31，活动期间，注册妈咪钱包的用户 点击拆红包即可获得随机金额现金红包，分享活动给好友， 奖励翻倍。红包奖励可在妈咪钱包“我的权益”中查看；</p>
+		<p>2. 体验妈咪钱包可获赠88元妈妈购优惠券，88元优惠券请在妈妈购“我的优惠券”中查看；</p>
+		<p>3. 每个用户只能领取一次红包，同一微信号，身份证，银行卡，手机号视为同一用户，获得的红包奖励活动期间内有效，逾期红包奖励自动失效；</p>
+		<p>4. 参与本次须遵守活动细则，最终解释权归育儿网所有。</p>		
+		<button class="btn_sure" onclick="makeSure();">确定</button>		
+	</div><!--end popup_content-->
+</body>
+</html>

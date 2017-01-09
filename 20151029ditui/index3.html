@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>免费预约</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link  href="styles/style.css" rel="stylesheet">
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+</head>
+<body>
+<div class="page page3" id="page">
+	<div class="header">
+		<img src="styles/images/title.png" class="title" />
+	</div>	
+	<img src="styles/images/middle.png" class="middle"/>
+	<div class="container">
+		<form>
+			<table class="info">
+				<tr>
+					<th>宝宝姓名</th>
+					<td>
+						<input type="text" class="text" name="name" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label>宝宝年龄</label>
+					</th>
+					<td>
+						<ul class="age-option">
+							<li class="current" onclick="selectAge(1);" id="option1">3~4岁</li>
+							<li onclick="selectAge(2);" id="option2">5~6岁</li>
+							<li onclick="selectAge(3);" id="option3">7~8岁</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label>联系电话</label>
+					</th>
+					<td>
+						<input type="text" class="text" name="phone" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<i class="icon icon3"></i>
+						所在城市
+					</th>
+					<td>
+						<select>
+							<option>东大中心</option>
+							<option>新街口金鹰</option>
+							<option>青春剧场</option>
+						</select>
+						<i class="select-icon"></i>
+					</td>
+				</tr>	
+			</table>
+		</form>
+		<button class="submit-btn" onclick="openPop();"></button>
+		<a href="#" class="my-code">我的二维码</a>
+		<img class="bear" src="styles/images/bear.png" />
+	</div>
+</div>
+
+<div class="pop-wrapper" id="pop-wrapper">
+	
+</div>
+<div class="pop-content" id="pop-content">
+	<p class="pop-tip">您的订单已提交成功！请填写您收到的验证码</p>
+	<div class="pop-container">
+		<span class="pop-label">验证码</span>
+		<input type="text"></input>
+		<button class="resend">重新发送(45)</button>
+	</div>
+	<button class="verify-btn"></button>
+	<i class="close-icon" onclick="closePop();"></i>
+</div>
+
+<script>
+window.onload=setPageHeight();
+function setPageHeight(){
+	var g_height=document.documentElement.clientHeight;
+	if(g_height>550){
+		$(".page").css("height",g_height);
+	}
+}
+//选择宝宝年龄的点击事件
+function selectAge(id){
+	var options=$(".age-option li");
+	$("#option"+id).addClass("current");
+	for(var i=1;i<=options.length;i++){
+		if(i!=id){
+			$("#option"+i).removeClass("current");
+		}
+	}
+}
+//弹出弹窗
+function openPop(){
+	var page=$('#page');
+	var div_width=page.width();
+	var div_height=page.height();
+	var div_left=page.offset().left;
+	var div_top=page.offset().top;
+	//pop-wrapper setPosition
+	var pop_wrapper=$('#pop-wrapper');
+	pop_wrapper.css("left",div_left);
+	pop_wrapper.css("top",div_top);
+	pop_wrapper.css("width",div_width);
+	pop_wrapper.css("height",div_height);
+	pop_wrapper.css("display","block");
+	$("#pop-wrapper").css("display","block");
+	$("#pop-content").css("display","block");	
+}
+//关闭弹窗
+function closePop(){
+	$("#pop-wrapper").css("display","none");
+	$("#pop-content").css("display","none");	
+}
+</script>
+</body>
+</html>

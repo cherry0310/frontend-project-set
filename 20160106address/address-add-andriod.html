@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>邮寄地址</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<!--公共头部-->
+<div class="wrapper-header">
+    <div class="wrapper-hd">
+        <a class="hd-left" href="javascript:void(0);" onclick="javascript:history.back()"><i class="icon-back"></i></a>
+        <div class="hd-title">邮寄地址</div>
+    </div>
+</div>
+<!--公共头部End-->
+<div class="wrapper address-add">
+	<form action="">
+		<ul class="base-info">
+			<li>
+				<span class="title">收件人</span>
+				<input class="info" type="text" name="user" placeholder="请填写正确的收件人" />
+			</li>
+			<li>
+				<span class="title">所在地区</span>
+				<a href="address-select1.html">请选择所在地区</a>
+			</li>
+			<li>
+				<span class="title">详细地址</span>
+				<input class="info" type="text" nam="detail_address" placeholder="街道、门牌号等详细信息" />
+			</li>
+		</ul>
+		<ul class="base-info">
+			<li>
+				<span class="title">联系电话</span>
+				<input class="info" type="text" name="tele" placeholder="请输入收件人联系方式" />
+			</li>
+		</ul>
+		<ul class="base-info">
+			<li>
+				<span class="title">设为默认地址</span>
+				<span class="tool-switch on">
+					<i class="icon-switch"></i>
+				</span>
+			</li>
+		</ul>
+		<div class="footer">
+			<input class="sure-btn" type="submit" value="确认" />
+		</div>
+	</form>
+</div>
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script>
+$(function(){
+	// 开关切换
+	$('.tool-switch').toggle(function(){
+		$(this).removeClass('on').addClass('off');
+	},function(){
+		$(this).removeClass('off').addClass('on');
+	})
+})
+</script>
+</body>
+</html>

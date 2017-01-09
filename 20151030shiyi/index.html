@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>辣妈抢钱节</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link  href="styles/style.css" rel="stylesheet">
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+</head>
+<body>
+<!--主页面-->
+<div class="page" id="page">
+    <div class="header">
+		<img src="styles/images/header.jpg" />
+		<!-- <div class="header-title">
+			<i class="header-icon"></i>
+			<span class="header-text">妈妈社区</span>
+			<i class="header-pic"></i>
+		</div> -->
+	</div>	
+	<div class="tip">
+		<i class="tip-icon"></i>		
+		<!--实时投资-->
+        <ul class="tip-current" id="invest_info">
+            <li><span>实时投资：</span><span>138****5525已成功投资***产品11111元</span></li>
+            <li><span>实时投资：</span><span>138****5525已成功投资***产品22222元</span></li>
+            <li><span>实时投资：</span><span>138****5525已成功投资***产品33333元</span></li>
+            <li><span>实时投资：</span><span>138****5525已成功投资***产品44444元</span></li>
+            <li><span>实时投资：</span><span>138****5525已成功投资***产品55555元</span></li>
+            <li><span>实时投资：</span><span>138****5525已成功投资***产品66666元</span></li>
+        </ul>
+	</div>
+	<!--投资-->
+	<div class="invest">
+		<img src="styles/images/invest-title.png" class="invest-title" />
+		<div class="invest-content">
+			<i class="dec-left"></i>
+			<i class="dec-right"></i>
+			<div class="invest-header">
+				<!--情况1：未登录-->
+				<span class="invest-tip" style="display:none;">您好，请<a href="#">登录</a></span>
+				<!--情况2：已登录-->
+				<span class="invest-tip">您好<span>***</span>,您目前有<span>**</span>个礼包未领取</span>
+				<span class="invest-rule" onclick="openPop(6);">活动规则>></span>
+			</div>
+			<div class="bags">
+				<img src="styles/images/bag1.png" class="bag" onclick="openPop(13);"/>
+				<img src="styles/images/bag2.png" class="bag" onclick="openPop(14);"/>
+				<img src="styles/images/bag3.png" class="bag" onclick="openPop(15);"/>
+			</div>
+			<!--三种投资-->
+			<div class="cat">
+				<p><span class="label">年化收益：</span><span class="percent">11.11%</span></p>
+				<p><span class="label">投资期限：</span><span class="days">365</span><span class="unit">天</span></p>
+				<div class="progress">
+					<span class="progress-label">今日进度：</span>
+					<div class="progress-barbg">
+						<div class="progress-bar" style="width:80%;">
+							<i class="progress-icon"></i>
+						</div>
+						<span class="progress-percent">80%</span>
+					</div>
+				</div>
+				<img src="styles/images/decoration.png" class="decoration" />
+				<img src="styles/images/dec1.png" class="dec">
+				<button class="invest-btn"></button>
+				<span class="invest-condition">1000元起投</span>
+			</div>
+			<div class="cat">
+				<p><span class="label">年化收益：</span><span class="percent">9.11%</span></p>
+				<p><span class="label">投资期限：</span><span class="days">180</span><span class="unit">天</span></p>
+				<div class="progress">
+					<span class="progress-label">今日进度：</span>
+					<div class="progress-barbg">
+						<div class="progress-bar" style="width:60%;">
+							<i class="progress-icon"></i>
+						</div>
+						<span class="progress-percent">60%</span>
+					</div>
+				</div>
+				<img src="styles/images/decoration.png" class="decoration" />
+				<img src="styles/images/dec2.png" class="dec">
+				<button class="invest-btn"></button>
+				<span class="invest-condition">1000元起投</span>
+			</div>
+			<div class="cat">
+				<p><span class="label">年化收益：</span><span class="percent">8.11%</span></p>
+				<p><span class="label">投资期限：</span><span class="days">90</span><span class="unit">天</span></p>
+				<div class="progress">
+					<span class="progress-label">今日进度：</span>
+					<div class="progress-barbg">
+						<div class="progress-bar" style="width:60%;">
+							<i class="progress-icon"></i>
+						</div>
+						<span class="progress-percent">60%</span>
+					</div>
+				</div>
+				<img src="styles/images/decoration.png" class="decoration" />
+				<img src="styles/images/dec3.png" class="dec">
+				<button class="invest-btn"></button>
+				<span class="invest-condition">1000元起投</span>
+			</div>			
+		</div>
+	</div><!--投资结束-->
+	<!--抽奖-->
+	<div class="raffle">
+		<img src="styles/images/raffle-title.png" class="raffle-title" />
+		<div class="tip">
+			<i class="tip-icon"></i>
+			<!--中奖公告-->
+			<ul class="tip-current" id="raffle_info">
+				<li><span>中奖公告：</span><span>186****3776抽中20元投资本金1</span></li>
+				<li><span>中奖公告：</span><span>186****3776抽中20元投资本金2</span></li>
+				<li><span>中奖公告：</span><span>186****3776抽中20元投资本金3</span></li>
+				<li><span>中奖公告：</span><span>186****3776抽中20元投资本金4</span></li>
+				<li><span>中奖公告：</span><span>186****3776抽中20元投资本金5</span></li>
+				<li><span>中奖公告：</span><span>186****3776抽中20元投资本金6</span></li>
+			</ul>
+		</div>
+		<div class="raffle-header">
+			<p class="raffle-tip">您好<span>XX</span>,您目前有<span>XX</span>次抽奖机会</p>
+			<p class="raffle-rule" onclick="openPop(1);">活动规则>></p>
+		</div>
+		<!--抽奖区-->
+		<div class="raffle-box">
+		    <button  class="raffle-btn" onclick="raffle();"></button>
+			<ul class="prize-list" id="prize-list">
+				<li class="current"><img src="styles/images/prize1.png" /></li>
+				<li><img src="styles/images/prize2.png" /></li>
+				<li><img src="styles/images/prize3.png" /></li>
+				<li><img src="styles/images/prize4.png" /></li>
+				<li><img src="styles/images/prize5.png" /></li>
+				<li class="li6"><img src="styles/images/prize6.png" /></li>
+				<li><img src="styles/images/prize7.png" /></li>
+				<li><img src="styles/images/prize8.png" /></li>
+				<li><img src="styles/images/prize9.png" /></li>
+				<li><img src="styles/images/prize10.png" /></li>
+			</ul>
+			
+		</div>
+	</div><!--抽奖结束-->
+	<!--活动记录-->
+	<div class="record">
+	    <img class="record-title" src="styles/images/record.png" />
+		<ul class="record-list">
+			<li>
+				<span class="left">20元投资本金(满1000元使用)</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+			<li>
+				<span class="left">30元投资本金(满13000使用)</span>
+				<div class="right">请填写邮寄信息</div>
+			</li>
+			<li>
+				<span class="left">100元投资本金(满30000元使用)</span>
+				<div class="right">已领取</div>
+			</li>
+			<li>
+				<span class="left">Boba Carrier婴幼儿人体工学背带</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+			<li>
+				<span class="left">孕期妈妈礼包</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+			<li>
+				<span class="left">90天高新理财礼品包</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+			<li>
+				<span class="left">180天高新理财礼品包</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+			<li>
+				<span class="left">20元现金补贴</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+			<li class="li-last">
+				<span class="left">20元现金补贴</span>
+				<div class="right not-receive">未领取</div>
+			</li>
+		</ul>
+    </div><!--活动记录结束-->
+	<!--累计投资-->
+	<div class="total">
+	    <img class="total-title" src="styles/images/total.png" />
+		<table class="total-list">
+			<tr>
+				<td class="td1" ><img src="styles/images/rank-icon1.png" /></td>
+				<td class="td2" width="36%">138****5525</td>
+				<td class="td3" width="40%">10,000,000元</td>
+			</tr>
+			<tr>
+				<td class="td1"><img src="styles/images/rank-icon2.png" /></td>
+				<td class="td2">138****5525</td>
+				<td class="td3">10,000,000元</td>
+			</tr>
+			<tr>
+				<td class="td1"><img src="styles/images/rank-icon3.png" /></td>
+				<td class="td2">138****5525</td>
+				<td class="td3">10,000,000元</td>
+			</tr>
+			<tr>
+				<td class="td1"><img src="styles/images/rank-icon4.png" /></td>
+				<td class="td2">138****5525</td>
+				<td class="td3">10,000,000元</td>
+			</tr>
+			<tr>
+				<td class="td1"><img src="styles/images/rank-icon5.png" /></td>
+				<td class="td2">138****5525</td>
+				<td class="td3">10,000,000元</td>
+			</tr>
+		</table>
+    </div><!--累计投资结束-->		
+</div>
+<!--弹窗-->
+<div class="pop-wrapper" id="pop-wrapper"></div>
+<!--弹窗:抽奖规则-->
+<div class="pop1" id="pop1" style="display:none;">
+	<p class="title">抽奖规则：</p>
+	<ul>
+		<li class="rule-li"><i class="icon icon1"></i><p>活动期间，首次成功购买任意产品，且单笔订单≥1000元，即得1次抽奖机会；</p></li>
+		<li class="rule-li"><i class="icon icon2"></i><p>购买累计金额在3万至10万元时，额外获得1次抽奖机会；</p></li>
+		<li class="rule-li"><i class="icon icon3"></i><p>购买累计金额大于10万元时，额外获得1次抽奖机会；</p></li>
+		<li class="rule-li"><i class="icon icon4"></i><p>成功分享本活动至微信空间/微博/QQ空间，额外获得1次抽奖机会；</p></li>
+		<li class="rule-li"><i class="icon icon5"></i><p>投资本金限本月内购买任意固定收益理财产品使用，实物奖品会由一路财富官方客服与中奖者联系，活动结束后7个工作日内寄出；</p></li>
+		<li class="rule-li"><i class="icon icon6"></i><p>本活动最终解释权归育儿网所有。</p></li>
+	</ul>
+	<i class="close" onclick="closePop(1);"></i>
+</div>
+<!--弹窗:礼包活动规则-->
+<div class="pop1" id="pop6" style="display:none;">
+	<p class="title">活动规则</p>
+	<ul>
+		<li class="rule-li"><i class="icon icon1"></i><p>11月10日-15日活动期间，首次购买任一以下款理财产品，即可获得相应固定收益和一个母婴礼包；</p></li>
+		<li class="rule-li"><i class="icon icon2"></i><p>除活动期间的首笔订单，任意单笔订单≥3万元，也可额外获赠一个母婴礼包（每位用户最多可得两个礼包）；</p></li>
+		<li class="rule-li"><i class="icon icon3"></i><p>每款理财产品对应的赠送礼包，用户自选其一，详细礼包详情请点击礼包查看；</p></li>
+		<li class="rule-li"><i class="icon icon4"></i><p>所获礼包，在支付完成后须到本活动页面—我的活动记录中领取；</p></li>
+		<li class="rule-li"><i class="icon icon5"></i><p>本活动最终解释权归育儿网所有。</p></li>
+	</ul>
+	<i class="close" onclick="closePop(6);"></i>
+</div>
+<!--弹窗：妈妈礼包列表（365天/300元礼包）-->
+<div class="pop5" id="pop13" style="display:none;">
+	<p class="mama-bag mama-bag1"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/1.jpg"/>嘻嘻兔孕妇枕头</li>
+		<li><img class="mama-pic" src="images/2.jpg"/>巴布豆宝宝鞋(宝蓝 130mm)</li>
+		<li class="li-last"><img class="mama-pic" src="images/3.jpg"/>抠电影网10元代金券</li>
+	</ul>
+	<p class="mama-bag mama-bag2"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/4.jpg"/>巴布豆宝宝鞋(宝蓝 135mm)</li>
+		<li><img class="mama-pic" src="images/5.jpg"/>巴布豆纸尿裤3包(M中号)</li>
+		<li class="li-last"><img class="mama-pic" src="images/6.jpg"/>贝亲婴儿柔湿巾80片</li>
+	</ul>
+	<p class="mama-bag mama-bag3"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/7.jpg"/>韩国婴儿吸盘保温碗</li>
+		<li><img class="mama-pic" src="images/8.jpg"/>乌龟灯星空投影灯</li>
+		<li class="li-last"><img class="mama-pic" src="images/9.jpg"/>小狗吸尘器30元券</li>
+	</ul>
+	<i class="close" onclick="closePop(13);"></i>
+</div>
+<!--弹窗：妈妈礼包列表（180天/200元礼包）-->
+<div class="pop5" id="pop14" style="display:none;">
+	<p class="mama-bag mama-bag1"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/1.jpg"/>十月天使孕产妇牙刷套装</li>
+		<li><img class="mama-pic" src="images/2.jpg"/>巴布豆纸尿裤3包（S小号）</li>
+		<li class="li-last"><img class="mama-pic" src="images/3.jpg"/>妈妈购App88元代金券</li>
+	</ul>
+	<p class="mama-bag mama-bag2"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/4.jpg"/>巴布豆纸尿裤3包（M中号）</li>
+		<li><img class="mama-pic" src="images/5.jpg"/>妈妈购App88元代金券</li>
+		<li class="li-last"><img class="mama-pic" src="images/6.jpg"/>好孩子婴儿湿巾80抽</li>
+	</ul>
+	<p class="mama-bag mama-bag3"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/7.jpg"/>澳贝小鲸鱼洗澡玩具</li>
+		<li><img class="mama-pic" src="images/8.jpg"/>巴布豆纸尿裤3包（L大号）</li>
+		<li class="li-last"><img class="mama-pic" src="images/9.jpg"/>妈妈购App88元代金券</li>
+	</ul>
+	<i class="close" onclick="closePop(14);"></i>
+</div>
+<!--弹窗：妈妈礼包列表（90天/100元礼包）-->
+<div class="pop5" id="pop15" style="display:none;">
+	<p class="mama-bag mama-bag1"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/1.jpg"/>嘻嘻兔孕妇枕头</li>
+		<li><img class="mama-pic" src="images/2.jpg"/>巴布豆宝宝鞋(宝蓝 130mm)</li>
+		<li class="li-last"><img class="mama-pic" src="images/3.jpg"/>抠电影网10元代金券</li>
+	</ul>
+	<p class="mama-bag mama-bag2"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/4.jpg"/>巴布豆宝宝鞋(宝蓝 135mm)</li>
+		<li><img class="mama-pic" src="images/5.jpg"/>巴布豆纸尿裤3包(M中号)</li>
+		<li class="li-last"><img class="mama-pic" src="images/6.jpg"/>贝亲婴儿柔湿巾80片</li>
+	</ul>
+	<p class="mama-bag mama-bag3"></p>
+	<ul>
+		<li><img class="mama-pic" src="images/7.jpg"/>韩国婴儿吸盘保温碗</li>
+		<li><img class="mama-pic" src="images/8.jpg"/>乌龟灯星空投影灯</li>
+		<li class="li-last"><img class="mama-pic" src="images/9.jpg"/>小狗吸尘器30元券</li>
+	</ul>
+	<i class="close" onclick="closePop(15);"></i>
+</div>
+
+<script>
+$(document).ready(function(){
+    moveUp("#invest_info","li");
+    moveUp("#raffle_info","li");
+});
+//图片滚动js函数
+function moveUp(id,child){
+    var _wrap=$(id);//定义滚动区域
+    var _interval=2000;//滚动间隔时间
+    var _moving;//需要清除的动画
+    _wrap.hover(function(){
+        clearInterval(_moving);//当鼠标在滚动区域中时,停止滚动
+    },function(){
+        _moving=setInterval(function(){
+            var _field=_wrap.find(child+':first');//此变量不可放置于函数起始处,li:first取值是变化的
+            var _h=_field.height()+554;//取得每次滚动高度(多行滚动情况下,此变量不可置于开始处,否则会有间隔时长延时)
+         	_field.animate({marginTop:-_h+'px'},2000,function(){//通过取负margin值,隐藏第一行
+         	_field.css('marginTop',0).appendTo(_wrap);//隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+            })
+        },_interval)//滚动间隔时间取决于_interval
+    }).trigger('mouseleave');//函数载入时,模拟执行mouseleave,即自动滚动
+}
+//抽奖按钮
+function raffle(){
+	$("#prize-list li:nth-child(2)").addClass("current");
+	$("#prize-list li:nth-child(1)").removeClass("current");
+}
+//弹出弹窗
+function openPop(id){
+	var page=$('#page');
+	var div_width=page.width();
+	var div_height=page.height();
+	var div_left=page.offset().left;
+	var div_top=page.offset().top;
+	//pop-wrapper setPosition
+	var pop_wrapper=$('#pop-wrapper');
+	pop_wrapper.css("left",div_left);
+	pop_wrapper.css("top",div_top);
+	pop_wrapper.css("width",div_width);
+	pop_wrapper.css("height",div_height);
+	pop_wrapper.css("display","block");
+	$("#pop-wrapper").css("display","block");
+	$("#pop"+id).css("display","block");
+	switch(id){//不同的弹框高度不一样，通过设定top值选择最佳的展示在用户可视范围内的位置。
+		case 1:
+		case 6:
+			$("#pop"+id).css("top",$(document).scrollTop()+40);
+			break;
+		case 13:
+		case 14:
+		case 15:
+			$("#pop"+id).css("top",$(document).scrollTop()+20);
+			break;
+		default:
+			$("#pop"+id).css("top",$(document).scrollTop()+80);
+	}	
+}
+//关闭弹窗
+function closePop(id){
+	$("#pop-wrapper").css("display","none");
+	$("#pop"+id).css("display","none");
+}
+</script>
+</body>
+</html>

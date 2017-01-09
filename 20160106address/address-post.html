@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>邮寄地址</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<!--公共头部-->
+<div class="wrapper-header">
+    <div class="wrapper-hd">
+        <a class="hd-left" href="javascript:void(0);" onclick="javascript:history.back()"><i class="icon-back"></i></a>
+        <div class="hd-title">邮寄地址</div>
+    </div>
+</div>
+<!--公共头部End-->
+<div class="wrapper address-post">
+	<ul class="address-list">
+		<li>
+			<div class="info">
+				<p class="base">
+					<span class="name">吴文博</span>
+					<span class="tele">18652085304</span>
+				</p>
+				<p class="address">
+					<span class="default">[默认]</span>
+					江苏省南京市宣武区梅园新村街道珠江路600号谷阳大厦1407室
+				</p>
+			</div>
+			<div class="select on">
+				<i class="icon"></i>
+			</div>
+		</li>
+		<li>
+			<div class="info">
+				<p class="base">
+					<span class="name">王女士</span>
+					<span class="tele">18652085304</span>
+				</p>
+				<p class="address">
+					江苏省南京市宣武区梅园新村街道紫金东苑小区600号二单元1802室
+				</p>
+			</div>
+			<div class="select off">
+				<i class="icon"></i>
+			</div>
+		</li>
+		<li>
+			<div class="info">
+				<p class="base">
+					<span class="name">杜杜</span>
+					<span class="tele">18652085304</span>
+				</p>
+				<p class="address">
+					江苏省南京市宣武区梅园新村街道珠江路600号谷阳大厦1407室
+				</p>
+			</div>
+			<div class="select off">
+				<i class="icon"></i>
+			</div>
+		</li>
+	</ul>
+	<div class="footer">
+		<input class="sure-btn" type="submit" value="添加新地址" />
+	</div>
+</div>
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script>
+$(function(){
+	// 选择切换
+	$(".address-list li").bind("click",function(){
+		$(".address-list li .select").removeClass("on").addClass("off");
+		$(this).children(".select").removeClass("off").addClass("on");
+	})
+})
+</script>
+</body>
+</html

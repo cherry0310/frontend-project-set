@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title>查看福袋</title>
+	<meta name="save" content="history" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="http://flashsale.ciurl.cn/static/2015080314121/css/common.css">
+	<script type="text/javascript" src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+	<style type="text/css">
+	button{-webkit-appearance:none;}
+	.main .luckybagbg{position:relative;max-width:640px;min-width:320px;}
+	.main .luckybagbg img{width:100%;}
+	.main .luckybagbg .plan1{position:absolute;left:6.56%;top:34.5%;width:84.85%;height:22.30%;background:url(images/plan1_bg.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .plan1 .tab1_down{position:absolute;left:4.95%;top:9.4%;width:46%;height:17%;background:url(images/tab1_down.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .plan1 .tab2_up{position:absolute;left:52.48%;top:9.4%;width:46%;height:18%;background:url(images/tab2_up.png) no-repeat;background-size:100% 100%;cursor:pointer;}
+	.main .luckybagbg .plan1 .btn_detail{position:absolute;left:61.88%;top:76.96%;width:33.52%;height:15.95%;background:url(images/btn_detail.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .plan2{position:absolute;left:6.56%;top:34.5%;width:84.85%;height:22.30%;background:url(images/plan2_bg.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .plan2 .tab1_up{position:absolute;left:4.95%;top:9.4%;width:46%;height:18%;background:url(images/tab1_up.png) no-repeat;background-size:100% 100%;cursor:pointer;}
+	.main .luckybagbg .plan2 .tab2_down{position:absolute;left:52.48%;top:9.4%;width:46%;height:17%;background:url(images/tab2_down.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .plan2 .btn_detail{position:absolute;left:61.88%;top:76.96%;width:33.52%;height:15.95%;background:url(images/btn_detail.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .total_gift{position:absolute;left:6.56%;top:57.77%;width:84.85%;height:13.61%;background:url(images/totalGift_bg.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .total_gift .btn_detail{position:absolute;left:61.88%;top:61.41%;width:33.52%;height:26.14%;background:url(images/btn_detail.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .coupon{position:absolute;left:6.56%;top:72.05%;width:84.85%;height:18.07%;background:url(images/coupon.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .coupon .crash{position:absolute;left:63.35%;top:35%;width:30.76%;height:30%;background:url(images/crash.png) no-repeat;background-size:100% 100%;}
+	.main .luckybagbg .buy_now{position:absolute;left:29.22%;top:92.61%;width:41.72%;height:4.58%;background:url(images/buy_now.png) no-repeat;background-size:100% 100%;}
+	</style>
+	<script type="text/javascript">
+		function showPlan(id){	
+			$('#plan'+id).css('display','block');
+			$('#plan'+(3-id)).css('display','none');
+			
+		}
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div class="luckybagbg">
+			<img src="images/luckybag.jpg" />
+			<div class="plan1" id="plan1" >
+				<div class="tab1_down"></div>
+				<div class="tab2_up" onclick="showPlan(2);"></div>
+				<a class="btn_detail" href="#"></a>	
+			</div>
+			<div class="plan2" id="plan2" style="display:none;" >
+				<div class="tab1_up" onclick="showPlan(1);"></div>
+				<div class="tab2_down"></div>
+				<a class="btn_detail" href="#"></a>
+			</div>
+			<div class="total_gift">
+				<a class="btn_detail" href="#"></a>
+			</div>
+			<div class="coupon">
+				<div class="crash"></div>
+			</div>
+			<a class="buy_now" href="#"></a>
+		</div>			
+	</div>
+</body>
+</html>

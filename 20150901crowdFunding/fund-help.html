@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>好友帮帮帮</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link  href="styles/style.css" rel="stylesheet">
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script src="js/action.js"></script>
+<script> 
+/*function loadJS(id,url){
+    var xmlHttp=null;
+    if(window.ActiveXObject){//IE
+        try{
+            //IE6以及以后版本中可以使用
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch(e){
+            //IE5.5以及以后版本可以使用
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    }
+    else if(window.XMLHttpRequest){//Firefox，Opera 8.0+，Safari，Chrome
+        xmlHttp = new XMLHttpRequest();
+    }
+    //采用同步加载
+    xmlHttp.open("GET",url,false);
+    //发送同步请求，如果浏览器为Chrome或Opera，必须发布后才能运行，不然会报错
+    xmlHttp.send(null);
+    //4代表数据发送完毕
+    if ( xmlHttp.readyState == 4 ){
+        //0为访问的本地，200到300代表访问服务器成功，304代表没做修改访问的是缓存
+        if((xmlHttp.status >= 200 && xmlHttp.status <300) || xmlHttp.status == 0 || xmlHttp.status == 304){
+            var myHead = document.getElementsByTagName("HEAD").item(0);
+            var myScript = document.createElement( "script" );
+            myScript.language = "javascript";
+            myScript.type = "text/javascript";
+            myScript.id = id;
+            try{
+                //IE8以及以下不支持这种方式，需要通过text属性来设置
+                myScript.appendChild(document.createTextNode(xmlHttp.responseText));
+            }
+            catch (ex){
+                myScript.text = xmlHttp.responseText;
+            }
+            myHead.appendChild( myScript );
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
+}*/
+</script> 
+<script>
+/*$(function(){
+	loadJS('js/action.js','js/action.js');
+});*/
+</script>
+</head>
+<body>
+	<div class="main help_main" id="help_main">
+		<div class="header"><img src="styles/images/header.jpg" /></div>
+		<p class="line1">我在参加妈妈购</p>
+		<p class="line2">"<span class="line2_span">全民众筹 玩转七夕</span>" 活动</p>
+		<p class="line3">快来帮我一下吧！</p>
+		<div class="navs">
+			<button class="nav nav1" onclick="popup();">帮好友筹钱</button>
+			<button class="nav nav2" >我要参加</button>
+		</div>
+		<p class="line4">下载妈妈购APP，你也可以参加哦~</p>
+		<p class="line5">更多奖品等你来！</p>
+		<p class="help_total">好友已筹得：<span class="total_span">2222</span>元</p>
+		<div class="help_detail">
+			<table class="help_table">
+				<tr>
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr>
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr>
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr>
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr>
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr class="hide">
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr class="hide">
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+				<tr class="hide">
+					<td class="col1">米兔不乖</td>
+					<td class="col2">帮他筹得</td>
+					<td class="col3"><span class="col3_span">22</span>元</td>
+				</tr>
+			</table>
+			<div class="help_bottom">
+				<img src="styles/images/open_icon.png" onclick="showHide();" id="icon" class="open"/>
+			</div>
+		</div>	
+		
+	</div>
+	<div class="popup_back" id="popup_back"></div>
+	<div class="popup_content" id="popup_content">
+		<p class="line1">恭喜你帮好友筹得<span class="line1_span">7</span>元</p>
+		<p class="line2">荣获 “<span class="line2_span">中国好棒友</span>” 称号！</p>
+		<div class="navs">
+			<button class="nav nav1" onclick="makeSure();">确定</button>
+			<button class="nav nav2">我要参加</button>
+		</div>
+	</div>
+</body>
+</html>	

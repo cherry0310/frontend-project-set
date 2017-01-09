@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>育儿百科</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<!--公共头部-->
+<div class="wrapper-header">
+    <div class="wrapper-hd">
+        <a class="hd-left" href="javascript:void(0);" onclick="javascript:history.back()"><i class="icon-back"></i></a>
+        <div class="hd-title">育儿百科</div>
+    </div>
+</div>
+<!--公共头部End-->
+<div class="wrapper educate-baike">
+	<div class="nav-switch">
+		<div class="nav-slide" id="iscroll_lite">
+			<ul class="nav-item switch-tab">
+				<li class="case">产后</li>
+				<li>0-1岁</li>
+				<li>1-3岁</li>
+				<li>3-6岁</li>
+				<li>0-1岁</li>
+				<li>1-3岁</li>
+				<li>3-6岁</li>
+			</ul>
+		</div>
+	</div>
+	<!--产后-->
+	<div class="switch-box">
+		<div class="daily-know">
+			<div class="know-part">
+				<div class="know-date">婴儿护理1</div>
+				<ul class="know-list">
+					<li><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li><i class="know-icon"></i><a href="#">断奶宝宝饮食规则</a></li>
+					<li><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+				</ul>
+				<div class="check-all">查看全部<i class="check-icon"></i></div>
+			</div>
+			<div class="know-part">
+				<div class="know-date">婴儿成长发育</div>
+				<ul class="know-list">
+					<li><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li><i class="know-icon"></i><a href="#">断奶宝宝饮食规则</a></li>
+					<li><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+				</ul>
+				<div class="check-all">查看全部<i class="check-icon"></i></div>
+			</div>
+			<div class="know-part">
+				<div class="know-date">婴儿疾病预防</div>
+				<ul class="know-list">
+					<li><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li><i class="know-icon"></i><a href="#">断奶宝宝饮食规则</a></li>
+					<li><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+				</ul>
+				<div class="check-all">查看全部<i class="check-icon"></i></div>
+			</div>
+		</div>
+	</div>
+	<!--产后End-->
+	<!--0-1岁-->
+	<div class="switch-box">
+		<div class="daily-know">
+			<div class="know-part">
+				<div class="know-date">婴儿护理2</div>
+				<ul class="know-list">
+					<li><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li><i class="know-icon"></i><a href="#">断奶宝宝饮食规则</a></li>
+					<li><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">宝宝口吃正常吗？</a></li>
+					<li class="off"><i class="know-icon"></i><a href="#">让宝宝学习乐器的好处</a></li>
+				</ul>
+				<div class="check-all">查看全部<i class="check-icon"></i></div>
+			</div>
+		</div>
+	</div>
+	<!--0-1岁End-->
+</div>
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script src="js/iscroll-lite.js"></script>
+<script>
+$(function(){
+	// 滑动导航顶部定位Top位置
+    var headTop = $('.wrapper').offset().top;
+    $('#iscroll_lite').css({top: headTop});
+
+	// 滑动导航
+	var li_width = $('#iscroll_lite li').outerWidth();
+	var li_len = $('#iscroll_lite li').length;
+	var item_width = li_width * li_len;
+	$('#iscroll_lite .nav-item').width(item_width);
+	var myScroll = new IScroll('#iscroll_lite', {
+		scrollX: true,
+		scrollY: false,
+		eventPassthrough: true
+	});
+    
+    // switch切换
+    $('.switch-box').hide().eq(0).show();
+    $('.switch-tab li').click(function(){
+        $(this).addClass("case").siblings().removeClass("case");
+        var i = $(this).index();
+        $('.switch-box').hide().eq(i).show();
+    })
+
+	// 查看全部
+	$('.check-all').bind("click",function(){
+		$(this).parent().find('.off').removeClass('off').addClass('on');
+		$(this).hide();
+	})
+})
+</script>
+</body>
+</html>

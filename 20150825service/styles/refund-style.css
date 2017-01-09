@@ -1,0 +1,62 @@
+@charset "utf-8";
+html{
+    font-family: "Helvetica Neue", "Microsoft Yahei", Helvetica, STHeiti, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body{
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+}
+dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a, img {
+    -webkit-touch-callout: none;
+}
+a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background: transparent;
+    outline: none;
+    color: #000;
+    -webkit-tap-highlight-color:transparent;
+}
+a:link {color: currentColor;}
+a:visited {color: currentColor;}
+a:hover {color: currentColor;}
+a:active {color: currentColor;}
+img{
+    display: block;
+    border: 0;
+    width: 100%;
+}
+input, button{
+    margin: 0;
+    padding: 0;
+    outline: none;
+/*    font-family: inherit;*/
+    font-weight: inherit;
+    font-size: inherit;
+}
+/*页面主体*/
+body{
+    margin: 0 auto;
+    font-family: Arial, "Microsoft Yahei";
+    background: #f5f0ec;
+}

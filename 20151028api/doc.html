@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>API文档</title> 
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<style type="text/css">
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font-family:Arial,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;font-size:12px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+ul,ol{list-style:none;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;}
+a:link,a:visited{color:#000;text-decoration:none;}
+a:hover{color:#0089cd;}
+img{border:0;-ms-interpolation-mode:bicubic;}
+/*具体*/
+.page .header{height:64px;background:#373942;}
+.page .title{font-size:30px;color:#fff;font-style:normal;height:64px;line-height:64px;margin-left:100px;}
+.page .nav-tip{height:60px;background:#0182c1;}
+.page .crumbs{height:60px;line-height:60px;margin-left:120px;color:#fff;font-size:14px;}
+.page .container{overflow:hidden;width:1200px;margin:0 auto;padding-top:40px;padding-bottom:40px;}
+.page .sidebar{float:left;width:230px;vertical-align:top;background:#f5f5f5;}
+.page .menu-title{height:60px;line-height:60px;color:#000;border-bottom:1px solid #dedede;font-size:18px;text-indent:10px;}
+.page .menu {text-indent:20px;}
+.page .menu li{height:34px;line-height:34px;font-size:14px;}
+.page .menu li:hover{cursor:pointer;color:#0089cd;background:#ddedf4;}
+.page .menu .selected{color:#0089cd;background:#ddedf4;}
+.page .detail{float:left;margin-left:40px;width:920px;}
+.page .detail-title{height:34px;line-height:34px;color:#333;font-size:28px;}
+.page .detail-title a{margin-left:6px;color:#0089cd;font-size:16px;}
+.page .detail-desc{margin-top:26px;height:24px;line-height:24px;font-size:14px;}
+.page .detail-table{width:100%;border:1px solid #dedede;table-layout:fixed;}
+.page .detail-table tr:hover{background:#dedede;}
+.page .detail-table th{border:1px solid #dedede;background:#666;color:#fff;text-align:left;padding:10px;}
+.page .detail-table td{border:1px solid #dedede;padding:10px;font-size:12px;word-break:break-all;word-wrap:break-word;}
+
+</style>
+</head> 
+<body> 
+<div class="page">
+	<!--标题-->
+	<div class="header">
+		<h1 class="title">API文档</h1>
+	</div>
+	<!--面包屑导航-->
+	<div class="nav-tip">
+		<div class="crumbs">所有类目</div>
+	</div>
+	<!--主体部分-->
+	<div class="container">
+		<!--左侧导航-->
+		<div class="sidebar">
+			<p class="menu-title">所有类目</p>
+			<ul class="menu">
+				<li class="selected" id="li1" onclick="select(1);">短信平台API</li>
+				<li id="li2" onclick="select(2);">IP定位城市API</li>
+				<li id="li3" onclick="select(3);">GPS定位位置API</li>
+				<li id="li4" onclick="select(4);">快递查询推送API</li>
+				<li id="li5" onclick="select(5);">节假日API</li>
+				<li id="li6" onclick="select(6);">手机充值API</li>
+				<li id="li7" onclick="select(7);">密码强度检测API</li>
+				<li id="li8" onclick="select(8);">sql注入API</li>
+				<li id="li9" onclick="select(9);">html安全过滤API</li>
+				<li id="li10" onclick="select(10);">天气查询API</li>
+				<li id="li11" onclick="select(11);">安全监控API</li>
+				<li id="li12" onclick="select(12);">代码安全审计API</li>
+				<li id="li13" onclick="select(13);">链接访问监控API</li>
+				<li id="li14" onclick="select(14);">支付功能API</li>
+				<li id="li15" onclick="select(15);">图片上传API</li>
+				<li id="li16" onclick="select(16);">违禁词API</li>
+				<li id="li17" onclick="select(17);">统一验证登录API</li>
+				<li id="li18" onclick="select(18);">邮件发送API</li>
+			</ul>
+		</div>
+		<!--右侧说明-->
+		<div class="detail" id="detail1">
+			<p class="detail-title">短信平台API<a href="api1_1.html"> 查看详细>></a></p>
+			<p class="detail-desc">提供了和短信平台功能相关的接口</p>
+			<table class="detail-table">
+				<tr>
+					<th width="20%">API列表</th>
+					<th width="40%">请求地址</th>
+					<th width="40%">描述</th>
+				</tr>
+				<tr>
+					<td><a href="api1_1.html">send</a></td>
+					<td>http://api.ci123.com/sms/send</td>
+					<td>单独发送一条短信</td>
+				</tr>
+			</table>
+		</div><!--detail1结束-->
+		<div class="detail" id="detail2" style="display:none;">
+			<p class="detail-title">IP定位城市API<a href="api2_1.html"> 查看详细>></a></p>
+			<p class="detail-desc">提供了和IP定位城市功能相关的接口</p>
+			<table class="detail-table">
+				<tr>
+					<th width="20%">API列表</th>
+					<th width="40%">请求地址</th>
+					<th width="40%">描述</th>
+				</tr>
+				<tr>
+					<td><a href="api2_1.html">ip</a></td>
+					<td>http://api.ci123.com/location/ip</td>
+					<td>利用ip地址获取用户所在城市</td>
+				</tr>
+			</table>
+		</div><!--detail2结束-->
+		<div class="detail" id="detail3" style="display:none;">
+			<p class="detail-title">GPS定位位置API<a href="#"> 查看详细>></a></p>
+			<p class="detail-desc">提供了和GPS定位位置功能相关的接口</p>		
+		</div><!--detail3结束-->
+		<div class="detail" id="detail4" style="display:none;">
+			<p class="detail-title">快递查询推送API<a href="#"> 查看详细>></a></p>
+			<p class="detail-desc">提供了和快递查询推送功能相关的接口</p>		
+		</div><!--detail4结束-->
+		<div class="detail" id="detail5" style="display:none;">
+			<p class="detail-title">节假日API<a href="#"> 查看详细>></a></p>
+			<p class="detail-desc">提供了和节假日功能相关的接口</p>		
+		</div><!--detail5结束-->
+	</div>
+</div>
+<script>
+//左侧导航栏的跳转
+function select(id){
+	$("#li"+id).attr("class","selected");
+	$("#detail"+id).css("display","block");
+	var menuList=$(".menu li");
+	//console.log(menuList.length);
+	for(var i=1;i<=menuList.length;i++){
+		if(i!=id){
+			$("#li"+i).attr("class","");
+			$("#detail"+i).css("display","none");
+		}
+	}
+}
+</script>
+</body> 
+</html>

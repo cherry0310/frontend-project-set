@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>申请退款</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="styles/refund-style.css">
+<style type="text/css">
+.refund-page{overflow: hidden;margin: 0 auto;width: 100%;max-width: 640px;min-width: 320px;}
+.refund-page{background-color:#f3f3f3;padding:0 0 20px;}
+.refund-page div{margin:0 3%;}
+.refund-page .grey{color:#999;margin-left:4px;}
+.refund-page .title{height:40px;line-height:40px;font-size:16px;color:#3e3e3e;font-weight:bold;margin:0;}
+.refund-page .title .star{color:#ef3673;margin-left:4px;}
+.refund-page .title .grey{font-size:14px;font-weight:normal;}
+.refund-page .selection,.refund-page .money input,.refund-page .description textarea,.refund-page .submit{font-family:Arial,"Microsoft Yahei";}
+/*下拉框*/
+.refund-page .selection{font-size:14px;color:#2b2b2b;width:100%;height:40px;border:1px solid #d0d0d0;border-radius:4px;-webkit-appearance:none;background-color:#fff;}
+.refund-page .selection option .grey{color:#999;margin-left:4px;}
+/*输入框*/
+.refund-page .money input{-webkit-appearance:none;padding-left:1%;display:block;width:99%;height:40px;font-size:14px;border:1px solid #d0d0d0;border-radius:4px;}
+/*文本框*/
+.refund-page .description textarea{padding-left:1%;padding-top:8px;width:98.5%;height:80px;border:1px solid #d0d0d0;border-radius:4px;-webkit-appearance:none;font-size:14px;}
+.refund-page .submit{display:block;width:100%;height:44px;line-height:44px;font-size:16px;color:#fff;font-weight:bold;border-radius:4px;text-align:center;margin-top:10px;border:0;background-color:#ef3673;}
+/*上传图片*/
+.refund-page .comment{overflow:hidden;padding:4px 0;border:1px dashed #d0d0d0;border-radius:4px;}
+.refund-page .comment .comment-upload{position:relative;width:40px;height:40px;background-color:#c5c5c5;border-radius:3px;float:left;}
+.refund-page .comment .comment-upload .upload-icon{position:absolute;top:50%;left:50%;margin:-13px 0 0 -12px;width:25px;height:25px;background: url("styles/images/icon.png") no-repeat;background-size:25px 25px;pointer-events:none;}
+.refund-page .comment .comment-upload .upload-input{width: 100%; height: 100%; opacity: 0;}
+.refund-page .upload-file{float:right;}
+.file-list {width:40px;height:40px;float:right;margin-right:2px;position:relative;}
+.file-list img{width:100%;height:100%;}
+.upload-file .file-list .btn-close{ position: absolute;top: 0px;right: 0px;width: 10px;height: 10px;text-align: center;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;background: #eee;z-index: 2;}
+.upload-file .file-list .close-icon{position: absolute;top: 50%;left: 50%;margin: -4px 0 0 -4px;width: 8px;height: 8px;background: url("styles/images/details-icon.png") no-repeat;background-size: 8px 8px;-webkit-transform: scale(0.7);-moz-transform: scale(0.7);-ms-transform: scale(0.7);-o-transform: scale(0.7);transform: scale(0.7);}
+</style>
+</head>
+<body>
+<div class="refund-page">
+<form>
+	<div class="type">
+		<p class="title">退款类型<span class="star">*</span></p>
+		<select class="selection">
+			<option>请选择退款类型</option>
+			<option value="type1">我要退款 (无需退货)</option>
+			<option value="type2">我要退货</option>
+			<option value="type3">我要换货</option>
+		</select>
+	</div><!--end type-->
+	<div class="reason">
+		<p class="title">退款原因<span class="star">*</span></p>
+		<select class="selection">
+			<option>请选择退款原因</option>
+			<option value="reason1">商品质量问题</option>
+			<option value="reason2">退运费</option>
+			<option value="reason3">收到商品破损</option>
+			<option value="reason4">商品错发漏发</option>
+			<option value="reason5">商品需要维修</option>
+			<option value="reason6">发票问题</option>
+			<option value="reason7">收到商品不符</option>
+			<option value="reason8">未按约定时间发货</option>
+		</select>
+	</div><!--end reason-->
+	<div class="money">
+		<p class="title">退款金额<span class="star">*</span><span class="grey">(最多<span>15.82</span>元，含发货邮费<span>7.0</span>元)</span></p>
+		<input type="text" placeholder="请输入退款金额" required="required"/>
+	</div><!--end money-->
+	<div class="description">
+		<p class="title">退款说明<span class="grey">(可不填)</span></p>
+		<textarea placeholder="请输入退款说明"></textarea>
+	</div><!--end description-->
+	<div><p class="title">上传凭证<span class="grey">(最多三张)</span></p></div>
+	<div class="comment">
+		<div class="comment-upload">
+			<i class="upload-icon"></i>
+			<input class="upload-input" type="file" onchange="addFile(event,33830)">
+		</div>
+		<dl class="upload-file upload_preview" id="preview_33830"></dl>
+		<div id="uploadInf" class="upload_inf"></div>
+    </div><!--end upload-->
+	<div>
+		<button class="submit" type="submit">提交申请</button>
+	</div>
+</form>
+</div>
+<script type="text/javascript" src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script type="text/javascript">
+	var img_count=0;
+	var max_img_size = 30*1024*1024;//30M
+    var total_size = 0;
+    var imgCount = 0;
+    var imgHasUpload = 0;
+    var last_file = '';
+    function addFile(event,order_id){
+		if(img_count<3){
+			var fileList = event.srcElement.files;
+			for(var i=0; i<fileList.length;i++){
+				var type = fileList[i].type;
+				if( total_size + fileList[i].size > max_img_size){
+					alertMes('图片太大，只能上传前'+imgHasUpload+'张~');
+					break;
+				}
+				if( last_file!=fileList[i].name ){
+					total_size += fileList[i].size;
+				}
+				last_file = fileList[i].name;
+
+				if ( type.indexOf('image') == -1 ) {
+					alertMes('第'+(i+1)+'张不是图片哦~');
+					break;
+				}
+
+				var image_input_id = 'pic_input_'+order_id+'_'+imgCount;
+				var image_dd_id = 'pic_dd_'+order_id+'_'+imgCount;
+				var image_type_id = 'pic_type_'+order_id+'_'+imgCount;
+				var image_size = fileList[i].size;
+				imgCount++;
+				imgHasUpload++;
+
+				var img = document.createElement('img');
+				var dd = document.createElement('dd');
+				dd.id = image_dd_id;
+				dd.className = 'file-list';
+
+				$('<span class="btn-close" onclick="removeImage(\''+image_dd_id+'\',\''+image_input_id+'\',\''+image_type_id+'\')"><i class="close-icon"></i></span>').appendTo(dd);
+				var reader = new FileReader();
+				reader.onload = function(e) {
+					if( order_id!=undefined ){
+						img.src = this.result;
+						//alert(img.src);
+						dd.appendChild(img);
+					   // saveImage(img.src,order_id,image_input_id,image_size,image_type_id,type);
+						var	preview = document.getElementById('preview_'+order_id);
+						preview.appendChild(dd);
+						$('.upload-input').val('');
+					}
+				}
+				reader.readAsDataURL(fileList[i]);
+			}
+		}else{
+			
+		}
+		img_count++;
+    }
+    function removeImage(dd_id,input_id,type_id){
+        //缩小体积
+        total_size -= parseInt( $('#'+input_id).attr('data-size') );
+        imgHasUpload --;
+        $('#'+input_id).remove();
+        $('#'+dd_id).remove();
+        $('#'+type_id).remove();
+		img_count--;
+    }
+</script>
+</body>
+</html>

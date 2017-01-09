@@ -1,0 +1,321 @@
+@charset "utf-8";
+html{font-size:62.5%;font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{-webkit-overflow-scrolling:touch;margin:0;}
+ul{margin:0;padding:0;list-style:none;outline:none;}
+dl,dd{margin:0;}
+a,img,input,button,div,li,span{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;}
+a{display:inline-block;margin:0;padding:0;text-decoration:none;background:transparent;outline:none;color:#000;}
+a:link,a:visited,a:hover,a:active{text-decoration:none;color:currentColor;}
+img{border:0;}
+p{margin:0;}
+input,button,select,textarea{margin:0;padding:0;border:0;outline:0;background:transparent;-webkit-appearance:none;}
+
+/*页面主体*/
+body{background:#f7f7f7;}
+body.wrapper-bgcolor{background:#fff;}
+.wrapper{position:relative;margin:0 auto;width:100%;max-width:75.0rem;}
+.wrapper img{display:block;width:100%;}
+.icon-arrow,
+.find-index .subnav-icon,
+.find-index .cate-icon,
+.find-index .more-icon,
+.org-detail .addr-icon,
+.org-detail .benefit-icon,
+.org-detail .more-icon,
+.org-detail .detail-icon,
+.org-detail .star-list,
+.course-detail .refund-icon,
+.course-detail .reserve-icon,
+.course-detail .detail-icon,
+.course-detail .more-icon,
+.course-detail .star-list,
+.course-detail .addr-icon,
+.course-detail .tele-icon,
+.find-comment .star-list,
+.order-details .tele-icon,
+.order-details .addr-icon,
+.order-details .more-icon{display:inline-block;background:url(images/part-icon.png) no-repeat;background-size:35.5rem;}
+
+/**********发现首页**********/
+.find-index .subnav-item{overflow:hidden;margin-bottom:1.2rem;padding:2.5rem 1.5rem;background:#fff;}
+.find-index .subnav-list{float:left;width:33%;text-align:center;}
+.find-index .subnav-list .subnav-icon{display:inline-block;width:6.0rem;height:6.0rem;}
+.find-index .subnav-list .subnav-icon1{background-position:0 -4.5rem;}
+.find-index .subnav-list .subnav-icon2{background-position:-6.5rem -4.5rem;}
+.find-index .subnav-list .subnav-icon3{background-position:-13.0rem -4.5rem;}
+.find-index .subnav-list .subnav-title{height:2.5rem;line-height:2.5rem;font-size:1.6rem;text-align:center;color:#111141;}
+.find-index .index-title{padding:2.0rem 1.5rem 1.2rem;font-size:1.6rem;color:#333;background:#fff;border-bottom:1px solid #e6e6e6;}
+.find-index .cate-item{overflow:hidden;margin-bottom:1.2rem;width:100%;background:#fff;}
+.find-index .cate-list{float:left;width:50%;border-top:1px solid #f0f0f2;padding:1.0rem 0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.find-index .right-list{border-left:1px solid #f0f0f2;}
+.find-index .cate-item li:nth-child(1){border-top:0;}
+.find-index .cate-item li:nth-child(2){border-top:0;}
+.find-index .cate-list .cate-part{margin-left:2.0rem;height:4.0rem;line-height:4.0rem;}
+.find-index .cate-list .cate-icon{float:left;display:inline-block;width:4.0rem;height:4.0rem;}
+.find-index .cate-list .cate-icon1{background-position:0 0;}
+.find-index .cate-list .cate-icon2{background-position:-4.5rem 0;}
+.find-index .cate-list .cate-icon3{background-position:-9.0rem 0;}
+.find-index .cate-list .cate-icon4{background-position:-13.5rem 0;}
+.find-index .cate-list .cate-icon5{background-position:-18.0rem 0;}
+.find-index .cate-list .cate-icon6{background-position:-22.5rem 0;}
+.find-index .cate-list .cate-icon7{background-position:-27.0rem 0;}
+.find-index .cate-list .cate-icon8{background-position:-31.5rem 0;}
+.find-index .cate-list .cate-title{float:left;margin-left:1.6rem;font-size:1.5rem;color:#333;}
+.find-index .index-title .recommend-more{float:right;height:1.5rem;line-height:1.5rem;}
+.find-index .more-text{font-size:1.3rem;color:#666;}
+.find-index .more-icon{width:0.8rem;height:1.3rem;background-position:-6.8rem -11.0rem;vertical-align:middle;}
+.find-index .course-list{background:#fff;padding:1.2rem 1.5rem;border-bottom:1px solid #e6e6e6;}
+.find-index .course-item li:last-child{border-bottom:0;}
+.find-index .course-list .course-content{overflow:hidden;width:100%;padding-top:1.5rem;}
+.find-index .course-list .course-title{float:left;width:70%;font-size:1.5rem;color:#333;line-height:2.2rem;}
+.find-index .course-list .course-title .course-desc{margin-left:1.6rem;}
+.find-index .course-list .course-price{float:right;margin-right:2.0rem;text-align:center;}
+.find-index .course-list .cur-price{font-size:2.0rem;color:#ff5722;}
+.find-index .course-list .past-price{font-size:1.2rem;color:#999;text-decoration:line-through;}
+.find-index .course-list .course-info{margin-top:0.8rem;height:1.8rem;line-height:1.8rem;font-size:1.2rem;color:#707070;}
+.find-index .course-list .course-dot{margin:0 0.6rem;}
+.find-index .course-list .course-times{float:right;margin-right:1.7rem;width:4.4rem;height:1.6rem;line-height:1.6rem;text-align:center;color:#999;background:#eee;border-radius:4px;}
+/**********发现首页-切换城市**********/
+.find-index .part-mask{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0, 0, 0, 0.5);z-index:9;display:none;}
+.find-index .part-layer{position: fixed;top:0;left:0;right:0;background:#f7f7f7;z-index:10;padding:3.5rem 0.8rem 2.5rem;display:none;}
+.find-index .part-layer .city-item{width:100%;overflow:hidden;}
+.find-index .part-layer .city-list{float:left;margin:0 2% 1.0rem;width:46%;height:4.2rem;line-height:4.2rem;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border:1px solid #e6e6e6;text-align:center;border-radius:4px;font-size:1.6rem;color:#505050;cursor:pointer;}
+.find-index .part-layer .cur{border-color:#3dcca4;color:#31ae8b;}
+
+/**********1元体验课和惠早教课程共用**********/
+.find-experience .course-list{border-bottom:0;margin-bottom:1.0rem;padding-top:1.5rem;}
+
+/**********机构详情**********/
+/*基础信息、开设课程、用户点评、中心简介标题公共样式*/
+.org-detail .detail-header{padding:2.0rem 1.2rem 1.2rem;font-size:1.6rem;color:#333;background:#fff;border-bottom:1px solid #e6e6e6;}
+.org-detail .detail-more{float:right;height:1.5rem;line-height:1.5rem;}
+.org-detail .detail-text{font-size:1.3rem;color:#666;}
+.org-detail .detail-num{color:#fb9530;}
+.org-detail .detail-icon{width:0.8rem;height:1.3rem;background-position:-6.8rem -11.0rem;vertical-align:middle;}
+/*头部*/
+.org-detail .org-desc{background:#fff;padding:1.6rem 1.2rem;margin-bottom:1.0rem;}
+.org-detail .org-desc .org-name{font-size:2.0rem;color:#333;margin-bottom:1.2rem;}
+.org-detail .org-desc .label-item{overflow:hidden;}
+.org-detail .org-desc .label-list{float:left;margin-right:0.5rem;margin-bottom:0.3rem;padding:0.2rem 0.5rem;font-size:1.2rem;color:#a0a0a0;border:1px solid #999;border-radius:4px;}
+/*基础信息*/
+.org-detail .org-info{background:#fff;margin-bottom:1.0rem;}
+.org-detail .org-info .base-item{overflow:hidden;border-bottom:1px solid #ddd;}
+.org-detail .org-info .base-item li:first-child{border-left:0;}
+.org-detail .org-info .base-list{float:left;padding:1.2rem 0;width:33.33%;text-align:center;border-left:1px solid #dedfe0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.org-detail .base-list .base-title{margin-bottom:0.5rem;font-size:1.6rem;color:333;}
+.org-detail .base-list .base-tip{font-size:1.2rem;color:#999;}
+.org-detail .org-info .base-addr{overflow:hidden;padding:1.2rem 0;}
+.org-detail .base-addr .addr-label{float:left;}
+.org-detail .base-addr .addr-icon{width:1.3rem;height:1.7rem;margin:0 1.2rem;background-position:-10.0rem -11.0rem;}
+.org-detail .org-info .addr-info{float:left;}
+.org-detail .addr-info .addr-name{height:1.9rem;line-height:1.9rem;font-size:1.5rem;color:#333;}
+.org-detail .addr-info .addr-tip{height:2.0rem;line-height:2.0rem;font-size:1.2rem;color:#666;}
+/*优惠*/
+.org-detail .org-benefit{padding:0 1.2rem;background:#fff;margin-bottom:1.0rem;}
+.org-detail .org-benefit .benefit-content{overflow:hidden;}
+.org-detail .org-benefit .benefit-label{float:left;margin-right:1.2rem;margin-top:1.4rem;}
+.org-detail .org-benefit .benefit-text{display:inline-block;width:1.5rem;height:1.5rem;line-height:1.5rem;font-size:1.2rem;color:#fff;text-align:center;background:#f5716d;}
+.org-detail .org-benefit .benefit-item{float:right;width:88%;}
+.org-detail .org-benefit .benefit-item li:last-child{border-bottom:0;}
+.org-detail .org-benefit .benefit-list{overflow:hidden;padding:1.2rem 0 1.0rem;width:100%;border-bottom:1px solid #e6e6e6;}
+.org-detail .org-benefit .benefit-list a{width:100%;}
+.org-detail .benefit-list .benefit-info{float:left;}
+.org-detail .benefit-list .benefit-title{margin-bottom:0.4rem;height:2.0rem;line-height:2.0rem;font-size:1.5rem;color:#333;}
+.org-detail .benefit-list .benefit-price{height:1.6rem;line-height:1.6rem;}
+.org-detail .benefit-list .cur-price{margin-right:1.0rem;font-size:1.6rem;color:#fb9530;}
+.org-detail .benefit-list .past-price{font-size:1.2rem;color:#999;text-decoration:line-through;}
+.org-detail .benefit-list .benefit-detail{float:right;height:4.0rem;line-height:4.0rem}
+.org-detail .benefit-list .benefit-icon{width:0.8rem;height:1.3rem;background-position:-6.8rem -11.0rem;}
+.org-detail .org-benefit .benefit-more{height:3.8rem;line-height:3.8rem;font-size:1.3rem;color:#666;text-align:center;}
+.org-detail .org-benefit .benefit-num{color:#fb9530;}
+.org-detail .org-benefit .more-icon{margin-left:0.7rem;width:0.9rem;height:0.6rem;background-position:-13.5rem -11.0rem;}
+/*开设课程*/
+.org-detail .org-course{margin-bottom:1.0rem;background:#fff;}
+.org-detail .org-course .course-item{overflow:hidden;padding:1.0rem 0.6rem 0;}
+.org-detail .org-course .course-list{float:left;margin:0 1%;width:48%;}
+.org-detail .course-list .course-info{padding:0.6rem 0 1.0rem;width:100%;text-align:center;}
+.org-detail .course-list .course-name{margin-bottom:0.6rem;font-size:1.5rem;color:#333;}
+.org-detail .course-list .course-age{font-size:1.2rem;color:#999;}
+/*用户评价*/
+.org-detail .org-comment{background:#fff;margin-bottom:1.0rem;}
+.org-detail .org-comment .comment-item{padding:0 1.2rem;}
+.org-detail .org-comment .comment-list{overflow:hidden;padding:1.2rem 0 1.5rem;}
+.org-detail .comment-list .user-pic{float:left;width:4.0rem;height:4.0rem;border-radius:4.0rem;}
+.org-detail .comment-list .comment-part{float:right;width:80%;}
+.org-detail .comment-list .comment-info{overflow:hidden;margin-bottom:0.4rem;}
+.org-detail .comment-list .comment-user{float:left;}
+.org-detail .comment-list .user-name{font-size:1.4rem;color:#333;line-height:2.0rem;}
+.org-detail .comment-list .star-item{overflow:hidden;}
+.org-detail .comment-list .star-list{float:left;margin-right:0.3rem;width:1.2rem;height:1.2rem;}
+.org-detail .comment-list .star-on{background-position:-21.4rem -11.0rem;}
+.org-detail .comment-list .star-off{background-position:-23.1rem -11.0rem;}
+.org-detail .comment-list .comment-datetime{float:right;margin-top:0.5rem;font-size:1.2rem;color:#999;}
+.org-detail .comment-list .comment-content{padding-right:1.2rem;font-size:1.3rem;color:#333;line-height:2.0rem;}
+/*中心简介*/
+.org-detail .org-brief{background:#fff;padding-bottom:2.0rem;}
+.org-detail .org-brief .brief-item{padding:0 1.2rem;}
+.org-detail .brief-list .brief-para{margin-top:0.8rem;margin-bottom:2.0rem;font-size:1.5rem;color:#666;line-height:2.0rem;}
+.org-detail .brief-list .brief-title{font-size:1.4rem;color:#fb9530;}
+.org-detail .brief-list .brief-subtitle{padding-bottom:0.8rem;font-size:1.2rem;color:#333;border-bottom:1px solid #e6e6e6;}
+.org-detail .brief-list .teacher-item{margin-bottom:2.0rem;}
+.org-detail .brief-list .teacher-list{padding:0.9rem 0;line-height:1.7rem;border-bottom:1px solid #e6e6e6;font-size:1.2rem;color:#666;}
+.org-detail .brief-list .support-item{margin-top:0.4rem;}
+.org-detail .brief-list .support-list{height:2.5rem;line-height:2.5rem;font-size:1.5rem;color:#666;}
+.org-detail .brief-list .support-list .support-icon{display:inline-block;width:0.4rem;height:0.4rem;border-radius:50%;background:#ddd;vertical-align:middle;margin-right:0.7rem;}
+
+
+/**********课程详情**********/
+/*使用商户、购买须知标题公共样式*/
+.course-detail .detail-header{padding:2.0rem 1.2rem 1.2rem;font-size:1.6rem;color:#333;background:#fff;border-bottom:1px solid #e6e6e6;}
+.course-detail .detail-more{float:right;height:1.5rem;line-height:1.5rem;}
+.course-detail .detail-text{font-size:1.3rem;color:#666;}
+.course-detail .detail-num{color:#fb9530;}
+.course-detail .detail-icon{width:0.8rem;height:1.3rem;background-position:-6.8rem -11.0rem;vertical-align:middle;}
+
+.course-detail .orange-color{color:#fb9530;}
+.course-detail .green-color{color:#31ae8b;}
+
+/*顶部介绍*/
+.course-detail .course-desc{background:#fff;margin-bottom:1.0rem;padding:1.6rem 1.2rem 0;}
+.course-detail .course-desc .desc-name{font-size:1.6rem;color:#333;margin-bottom:1.0rem;}
+.course-detail .course-desc .desc-text{font-size:1.2rem;color:#666;padding-bottom:1.0rem;}
+.course-detail .course-desc .price-item{overflow:hidden;padding:1.0rem 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
+.course-detail .course-desc .price-item li:first-child{border-left:0;}
+.course-detail .course-desc .price-list{float:left;width:50%;border-left:1px solid #ddd;text-align:center;color:#666;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.course-detail .price-list .price-value{font-size:2.0rem;}
+.course-detail .price-list .price-text{font-size:1.2rem;}
+.course-detail .price-list .past-price{text-decoration:line-through;}
+.course-detail .desc-info{padding:1.0rem 0;}
+.course-detail .desc-info span{font-size:1.2rem;vertical-align:middle;}
+.course-detail .desc-info i{margin-right:0.5rem;width:1.5rem;height:1.5rem;vertical-align:middle;}
+.course-detail .refund-icon{background-position: -14.9rem -11.0rem;}
+.course-detail .reserve-icon{margin-left:1.2rem;background-position:-16.9rem -11.0rem;}
+/*.course-detail .reserve-icon{margin-left:1.2rem;margin-right:0.5rem;width:15px;height:15px;background-position:-169px -110px;background-size:355px;vertical-align:middle;}*/
+/*适用商户*/
+.course-detail .course-company{background:#fff;margin-bottom:1.0rem;}
+.course-detail .company-info{overflow:hidden;padding:1.5rem 1.2rem;}
+.course-detail .company-info .company-content{float:left;}
+.course-detail .company-info .company-name{font-size:1.5rem;color:#333;margin-bottom:1.0rem;}
+.course-detail .company-info .company-addr{font-size:1.3rem;color:#666;margin-bottom:0.8rem;}
+.course-detail .company-info .company-distance{height:1.5rem;line-height:1.5rem;font-size:1.2rem;color:#666;}
+.course-detail .company-info .addr-icon{margin-right:0.6rem;width:1.2rem;height:1.5rem;background-position:-11.8rem -11.0rem;vertical-align:middle;}
+.course-detail .company-info .distance-value{margin-right:1.3rem;}
+.course-detail .company-info .tele-icon{float:right;width:3.2rem;height:3.2rem;background-position:0 -13.7rem;margin-top:1.6rem;margin-right:2.0rem;}
+/*购买须知*/
+.course-detail .course-notice{background:#fff;margin-bottom:1.0rem;}
+.course-detail .brief-item{padding:0 1.2rem 1.2rem;border-bottom:1px solid #ddd;}
+.course-detail .brief-list{padding-top:1.8rem;}
+.course-detail .brief-list .brief-title{font-size:1.5rem;color:#fb9530;margin-bottom:0.4rem;}
+.course-detail .brief-list .brief-para{font-size:1.5rem;color:#666;line-height:2.0rem;}
+.course-detail .notice-more{height:3.8rem;line-height:3.8rem;font-size:1.3rem;color:#666;text-align:center;}
+.course-detail .more-icon{margin-left:0.7rem;width:0.9rem;height:0.6rem;background-position:-13.5rem -11.0rem;}
+/*课程介绍&用户点评*/
+.course-detail .course-menu{background:#fff;}
+.course-detail .menu-item{width:100%;overflow:hidden;}
+.course-detail .menu-list{float:left;width:50%;border-bottom:1px solid #ddd;text-align:center;font-size:1.6rem;color:#222;padding:1.9rem 0 1.0rem;}
+.course-detail .menu-on{border-bottom:2px solid #3dcca4;}
+.course-detail .comment-num{font-size:1.2rem;}
+.course-detail .course-part{padding:2.0rem 1.2rem 4.8rem;}
+.course-detail .course-para{padding-top:2.0rem;line-height:2.0rem;font-size:1.5rem;color:#333;}
+
+.course-detail .comment-item{padding:0 1.2rem 3.6rem;}
+.course-detail .comment-item li:last-child{border-bottom:0;}
+.course-detail .comment-list{overflow:hidden;padding:1.0rem 0;border-bottom:1px solid #ddd;}
+.course-detail .comment-list .user-pic{float:left;width:4.0rem;height:4.0rem;border-radius:4.0rem;}
+.course-detail .comment-list .comment-part{float:right;width:80%;}
+.course-detail .comment-list .comment-info{overflow:hidden;margin-bottom:0.4rem;}
+.course-detail .comment-list .comment-user{float:left;}
+.course-detail .comment-list .user-name{font-size:1.4rem;color:#333;line-height:2.0rem;}
+.course-detail .comment-list .star-item{overflow:hidden;}
+.course-detail .comment-list .star-list{float:left;margin-right:0.3rem;width:1.2rem;height:1.2rem;}
+.course-detail .comment-list .star-on{background-position:-21.4rem -11.0rem;}
+.course-detail .comment-list .star-off{background-position:-23.1rem -11.0rem;}
+.course-detail .comment-list .comment-datetime{float:right;margin-top:0.5rem;font-size:1.2rem;color:#999;}
+.course-detail .comment-list .comment-content{padding-right:1.2rem;font-size:1.3rem;color:#333;line-height:2.0rem;}
+/*底部固定栏*/
+.course-detail .course-footer{position:fixed;overflow:hidden;left:0;right:0;bottom:0;margin:0 auto;width:100%;height:3.8rem;line-height:3.8rem;background:#fff;border-top:1px solid #ddd;}
+.course-detail .course-footer .footer-price{float:left;width:50%;text-align:center;}
+.course-detail .course-footer .cur-price{font-size:1.8rem;color:#fb9530;margin-right:1.7rem;}
+.course-detail .course-footer .past-price{font-size:1.2rem;color:#999;text-decoration:line-through;}
+.course-detail .course-footer .footer-buy{float:left;width:50%;text-align:center;background:#ff9e05;font-size:1.6rem;color:#fff;}
+
+/**********用户点评**********/
+.find-comment .orange-color{color:#fb9530;}
+/*头部*/
+.find-comment .comment-header{padding:2.2rem 1.2rem;text-align:center;}
+.find-comment .comment-header .org-name{font-size:1.7rem;color:#333;margin-bottom:1.2rem;}
+.find-comment .comment-header .org-star{font-size:1.2rem;color:#333;}
+.find-comment .comment-header .star-item{overflow:hidden;display:inline-block;}
+.find-comment .comment-header .star-list{float:left;margin-right:0.3rem;width:1.2rem;height:1.2rem;}
+.find-comment .comment-header .star-on{background-position:-21.4rem -11.0rem;}
+.find-comment .comment-header .star-off{background-position:-23.1rem -11.0rem;}
+/*评价列表*/
+.find-comment .comment-container{background:#fff;padding:0 1.2rem;}
+.find-comment .comment-container .detail-header{padding:2.0rem 0 1.2rem;font-size:1.6rem;color:#333;background:#fff;border-bottom:1px solid #e6e6e6;}
+
+.find-comment .comment-item li:last-child{border-bottom:0;}
+.find-comment .comment-list{overflow:hidden;padding:1.0rem 0;border-bottom:1px solid #ddd;}
+.find-comment .comment-list .user-pic{float:left;width:4.0rem;height:4.0rem;border-radius:4.0rem;}
+.find-comment .comment-list .comment-part{float:right;width:80%;}
+.find-comment .comment-list .comment-info{overflow:hidden;margin-bottom:0.4rem;}
+.find-comment .comment-list .comment-user{float:left;}
+.find-comment .comment-list .user-name{font-size:1.4rem;color:#333;line-height:2.0rem;}
+.find-comment .comment-list .star-item{overflow:hidden;}
+.find-comment .comment-list .star-list{float:left;margin-right:0.3rem;width:1.2rem;height:1.2rem;}
+.find-comment .comment-list .star-on{background-position:-21.4rem -11.0rem;}
+.find-comment .comment-list .star-off{background-position:-23.1rem -11.0rem;}
+.find-comment .comment-list .comment-datetime{float:right;margin-top:0.5rem;font-size:1.2rem;color:#999;}
+.find-comment .comment-list .comment-content{padding-right:1.2rem;font-size:1.3rem;color:#333;line-height:2.0rem;}
+
+
+
+/*课程详情--顶部轮播图--新增*/
+.course-detail .part-banner{position:relative;width:100%;}
+.course-detail .swipe{overflow:hidden;width:100%;}
+.course-detail .swipe-wrap{overflow:hidden;}
+.course-detail .swipe-wrap>li{position:relative;float:left;width:100%;}
+.course-detail .swipe-wrap>li a{width:100%;display:block;}
+.course-detail .indicator{position:absolute;bottom:0;right:0;width:4.5rem;height:2.0rem;line-height:2.0rem; background:rgba(0, 0, 0, 0.5);text-align:center;z-index:20;color:#fff;font-size:1.4rem}
+/*机构详情--顶部轮播图--新增*/
+.org-detail .part-banner{position:relative;width:100%;}
+.org-detail .swipe{overflow:hidden;width:100%;}
+.org-detail .swipe-wrap{overflow:hidden;}
+.org-detail .swipe-wrap>li{position:relative;float:left;width:100%;}
+.org-detail .swipe-wrap>li a{width:100%;display:block;}
+.org-detail .indicator{position:absolute;bottom:0;right:0;width:4.5rem;height:2.0rem;line-height:2.0rem; background:rgba(0, 0, 0, 0.5);text-align:center;z-index:20;color:#fff;font-size:1.4rem}
+
+
+
+/**********订单详情**********/
+.order-details .green-color{color:#31ae8b;}
+/*上部介绍*/
+.order-details .details-container{margin-bottom:1.0rem;padding:1.8rem 1.2rem 0;background:#fff;}
+.order-details .details-container .details-header{overflow:hidden;padding-bottom:1.7rem;border-bottom:1px solid #e6e6e6;}
+.order-details .details-container .course-pic{float:left;width:11.2rem;}
+.order-details .details-container .course-brief{margin-left:12.4rem;}
+.order-details .details-container .course-title{margin-bottom:0.5rem;line-height:2.4rem;font-size:1.6rem;color:#333;}
+.order-details .details-container .course-price{height:2.4rem;line-height:2.4rem;font-size:1.6rem;color:#fe9900;}
+.order-details .details-item{width:100%;}
+.order-details .details-list{overflow:hidden;height:4.5rem;line-height:4.5rem;border-bottom:1px solid #e6e6e6;font-size:1.4rem;color:#333;}
+.order-details .details-list .info-left{float:left;color:#666;}
+.order-details .details-list .info-right{float:right;}
+.order-details .details-tip{height:3.5rem;line-height:3.5rem;font-size:1.2rem;}
+/*适用商户*/
+.order-details .details-company{margin-bottom:3.0rem;padding:0 1.2rem;background:#fff;}
+.order-details .details-company .company-header{padding:2.0rem 0 1.2rem;font-size:1.4rem;color:#666;border-bottom:1px solid #e6e6e6;}
+.order-details .company-item{width:100%;}
+.order-details .company-item li:last-child{border-bottom:0;}
+.order-details .company-list{overflow:hidden;padding:1.0rem 0;border-bottom:1px solid #e6e6e6;}
+.order-details .company-list .company-tele{float:right;width:8.5rem;}
+.order-details .company-list .tele-icon{margin-left:3.7rem;width:2.0rem;height:2.0rem;background-position:-18.9rem -11.0rem;vertical-align:middle;}
+.order-details .company-list .company-content{margin-right:8.5rem;padding-right:1.0rem;border-right:1px solid #e6e6e6;}
+.order-details .company-list .company-name{font-size:1.6rem;color:#333;margin-bottom:0.6rem;}
+.order-details .company-list .company-addr{font-size:1.2rem;color:#666;line-height:1.8rem;}
+.order-details .company-list .company-distance{height:2.4rem;line-height:2.4rem;font-size:1.2rem;color:#999;}
+.order-details .company-list .addr-icon{margin-right:0.5rem;width:1.0rem;height:1.4rem;background-position:-24.8rem -10.9rem;vertical-align:middle;}
+.order-details .company-list .distance-value{margin-right:1.2rem;}
+.order-details .company-more{height:3.0rem;line-height:3.0rem;font-size:1.2rem;color:#999;text-align:center;}
+.order-details .more-icon{margin-left:0.7rem;width:0.9rem;height:0.6rem;background-position:-13.5rem -11.0rem;}
+
+
+

@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工登录</title>
+<style>
+body{background:#fff;font-family:Arial,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;font-size:12px;background:url(styles/images/bg.jpg);}
+.login-wrapper{position:absolute;left:50%;top:100px;margin-left:-205px;width:410px;border:1px solid #273442;background:#fdfdfd;box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);border-radius:6px 6px 0 0;}
+.login-wrapper .login-title{height:45px;line-height:45px;background:url('styles/images/loginTitleBg.png') repeat;border-radius:4px 4px 0 0;color:#fff;font-size:20px;text-align:center;}
+.login-wrapper .login-inner{padding-bottom:18px;box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);}
+.login-wrapper .login-content{overflow:hidden;position:relative;margin-left:52px;margin-bottom:20px;background-image:-webkit-linear-gradient(-90deg, #eff0f1,#fbfcfe);background-image:-moz-linear-gradient(-90deg, #eff0f1,#fbfcfe);background-image:-o-linear-gradient(-90deg, #eff0f1,#fbfcfe);background-image:linear-gradient(180deg, #eff0f1,#fbfcfe);width:300px;height:39px;border:1px solid #bdbdbd;border-radius:4px;box-shadow:0 2px 3px rgba(82, 85, 90, 0.21) inset;}
+.login-wrapper .login-content:after{content:"";position:absolute;top:0;bottom:0;left:42px;width:4px;background:url('styles/images/icon.png') no-repeat -7px -58px;}
+.login-wrapper .login-content1{margin-top:30px;}
+.login-wrapper .login-content .login-icon{position:absolute;left:12px;top:12px;width:20px;height:17px;background:url('styles/images/icon.png') no-repeat;}
+.login-wrapper .login-content1 .login-icon{background-position:0 -3px;}
+.login-wrapper .login-content2 .login-icon{background-position:0 -39px;}
+.login-wrapper .login-input{position:absolute;left:44px;padding-left:10px;height:39px;line-height:39px;border:0;outline:0;background:none;font-family:"Microsoft Yahei";border-radius:0 4px 4px 0;}
+.login-wrapper .login-content1 .login-input{width:130px;}
+.login-wrapper .login-mail{position:absolute;right:0px;top:0;width:120px;height:39px;line-height:39px;border-radius:0 4px 4px 0;font-size:14px;background:#fff;text-align:center;color:#626262;z-index:99;}
+.login-wrapper .login-btn{height:40px;line-height:40px;text-align:center;width:200px;margin-left:105px;margin-bottom:8px;cursor:pointer;font-size:20px;border-radius:4px;font-family:'Microsoft YaHei';background-color:#4393f9;background-image:-webkit-linear-gradient(-90deg, #5aaefc,#4393f9);background-image:-moz-linear-gradient(-90deg, #5aaefc,#4393f9);background-image:-o-linear-gradient(-90deg, #5aaefc,#4393f9);background-image:linear-gradient(180deg, #5aaefc,#4393f9);box-shadow:0 1px 0 rgba(255, 255, 255, 0.34) inset, 0 2px 2px 0 rgba(0, 0, 0, 0.19);border:1px solid #4186db;color:#fff;}
+.login-wrapper .login-content2{margin-bottom:42px;}
+.login-wrapper .copyright{height:30px;line-height: 30px;text-align: center;background: #eee;color: #626262;}
+</style>
+</head>
+<body>
+<div class="login-wrapper">
+    <div class="login-title">育儿网员工登录</div>
+    <div class="login-inner">
+		<div class="login-content login-content1">
+            <i class="login-icon"></i>
+            <input type="text" placeholder="育儿网帐号" class="login-input" />
+  			<span class="login-mail">@corp-ci.com</span>
+        </div>
+        <div class="login-content login-content2">
+            <i class="login-icon"></i>
+            <input type="password" placeholder="打卡系统密码" class="login-input" />
+        </div>
+        <div class="login-btn">登 录</div>     
+    </div>
+    <div class="copyright">技术部 v1.0</div>
+</div>
+</body>
+</html>

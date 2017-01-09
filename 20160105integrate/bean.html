@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>糖豆兑换</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="styles/style.css">
+<style>
+body{background:#fff;}
+.bean{background:#fff;}
+.bean p{margin:0;padding:0;}
+.bean .bean-list{width:100%;margin-bottom:30px;}
+.bean .bean-list li{overflow:hidden;width:94%;height:70px;padding:10px 3%;border-bottom:1px solid #dbdbdb;}
+.bean .bean-list .goods{float:left;width:70px;height:70px;}
+.bean .bean-list .info{float:left;margin-left:10px;}
+.bean .bean-list .name{height:40px;line-height:40px;color:#2d2d2d;font-size:16px;}
+.bean .bean-list .points{height:24px;line-height:24px;color:#19c21d;font-size:14px;}
+.bean .bean-list a{float:right;text-decoration:none;width:46px;height:24px;line-height:24px;text-align:center;color:#19c21d;border:1px solid #19c21d;border-radius:4px;margin-top:20px;font-size:12px;}
+.bean .bean-list .finish{float:right;text-decoration:none;width:46px;height:24px;line-height:24px;text-align:center;color:#707070;border:1px solid #707070;border-radius:4px;margin-top:20px;font-size:12px;}
+</style>
+</head>
+<body>
+<!--公共头部-->
+<div class="wrapper-header">
+    <div class="wrapper-hd">
+        <a class="hd-left" href="javascript:void(0);" onclick="javascript:history.back()"><i class="icon-back"></i></a>
+        <div class="hd-title">糖豆兑换</div>
+    </div>
+</div>
+<!--公共头部End-->
+<div class="wrapper bean">
+	<ul class="bean-list">
+		<li>
+			<img class="goods" src="images/goods-pic.jpg" alt="商品图片">
+			<div class="info">
+				<p class="name">20糖豆</p>
+				<p class="points">2000积分</p>
+			</div>
+			<a href="#">兑换</a>
+		</li>
+		<li>
+			<img class="goods" src="images/goods-pic.jpg" alt="商品图片">
+			<div class="info">
+				<p class="name">20-50糖豆任你抽</p>
+				<p class="points">2000积分</p>
+			</div>
+			<a href="#">抽奖</a>
+		</li>
+		<li>
+			<img class="goods" src="images/goods-pic.jpg" alt="商品图片">
+			<div class="info">
+				<p class="name">20-50糖豆任你抽</p>
+				<p class="points">2000积分</p>
+			</div>
+			<!-- <a href="#">兑换</a> -->
+			<span class="finish">兑完</span>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

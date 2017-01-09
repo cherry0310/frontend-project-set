@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轮播图</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+ul,li,ol{list-style:none;}
+a{display:block;}
+*{margin:0;padding:0;}
+body{margin:0;padding:0;overflow:hidden;}
+.banner-show{width:100%;margin:0 auto;max-width:1440px;min-width:1000px;}
+.flexslider {width:100%;position:relative;}
+.slides li{width:100%;}
+.slides li img{width:100%;display:block;}
+.flex-control-nav{position:absolute;bottom:50px;left:50%;margin-left:-397px;z-index:99;}
+.flex-control-nav li {float:left;margin-right:10px;}
+.flex-control-nav li:last-child {margin-right:0;}
+.flex-control-nav li a {width:110px;height:62px;background-size:110px auto;margin-right:8px;display:block;cursor:pointer;text-indent:-9999px;border:3px solid transparent;}
+.flex-control-nav li:first-child a{background:url(styles/images/little1.jpg) no-repeat;background-size:120px auto;}
+.flex-control-nav li:nth-child(2) a{background:url(styles/images/little2.jpg) no-repeat;background-size:120px auto;}
+.flex-control-nav li:nth-child(3) a{background:url(styles/images/little3.jpg) no-repeat;background-size:120px auto;}
+.flex-control-nav li:nth-child(4) a{background:url(styles/images/little4.jpg) no-repeat;background-size:120px auto;}
+.flex-control-nav li:nth-child(5) a{background:url(styles/images/little5.jpg) no-repeat;background-size:120px auto;}
+.flex-control-nav li:nth-child(6) a{background:url(styles/images/little3.jpg) no-repeat;background-size:120px auto;}
+.flex-control-nav li a.flex-active {border:3px solid #ee7800;cursor:default;}
+.flex-direction-nav{position:absolute;bottom:40px;left:50%;margin-left:-447px;width:894px;height:88px;background:rgba(0,0,0,0.5);}
+.flex-direction-nav .flex-prev{float:left;margin-top:32px;margin-left:20px;width:14px;height:25px;background:url(styles/images/icon-left.png) no-repeat;text-indent:-9999px;z-index:99;}
+.flex-direction-nav .flex-next {float:right;margin-top:32px;margin-right:20px;width:14px;height:25px;background:url(styles/images/icon-right.png) no-repeat;text-indent:-9999px;z-index:99;}
+</style>
+</head>
+<body>
+<div class="banner-show">
+    <div class="flexslider">
+      	<ul class="slides">
+         	<li>
+                <a href="#" class="show-img"><img src="styles/images/1.jpg" alt="fanfanshuo4"></a>
+            </li>
+        	<li>
+                <a href="#"><img src="styles/images/2.png" alt="nizao28"></a>
+            </li>
+        	<li>
+                <a href="#" class="show-img"><img src="styles/images/3.jpg" alt="meijia-01"></a>
+            </li>
+        	<li>
+                <a href="#" class="show-img"><img src="styles/images/4.jpg" alt="duihuazuojie"></a>
+            </li>
+        	<li>
+                <a href="#" class="show-img"><img src="styles/images/5.jpg" alt="survey-yiyu"></a>
+            </li>
+            <li>
+                <a href="#" class="show-img"><img src="styles/images/3.jpg" alt="meijia-01"></a>
+            </li>
+    	</ul>
+    </div>
+</div>
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<script type="text/javascript" src="http://www.ci123.com/special/projectList/js/jquery.flexslider-2.2.2.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $('.flexslider').flexslider({
+        animation:"slide"         
+    });
+});
+</script>
+</body>
+</html>

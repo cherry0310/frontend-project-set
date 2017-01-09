@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>免费预约</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link  href="styles/style.css" rel="stylesheet">
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+</head>
+<body>
+<div class="page page2">
+	<div class="header">
+		<img src="styles/images/title.png" class="title" />
+	</div>	
+	<img src="styles/images/middle.png" class="middle"/>
+	<div class="container">
+		<ul class="info-list">
+			<li><i class="icon icon1"></i>胡叔叔</li>
+			<li><i class="icon icon2"></i>12345678910</li>
+			<li><i class="icon icon3"></i>地质博物馆</li>
+		</ul>
+		<button class="add-btn"></button>
+		<div class="link">
+			<a href="#" class="link-stat">我的统计</a>
+			<a href="#" class="link-code">我的二维码</a>
+		</div>
+		<img class="bear" src="styles/images/bear.png" />
+	</div>
+</div>
+<script>
+window.onload=setPageHeight();
+function setPageHeight(){
+	var g_height=document.documentElement.clientHeight;
+	if(g_height>550){
+		$(".page").css("height",g_height);
+	}
+}
+</script>
+</body>
+</html>

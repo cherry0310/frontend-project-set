@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>弹窗：选择礼包-01</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link  href="styles/style.css" rel="stylesheet">
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body> 
+<!--弹窗：选择礼包-->
+<div class="pop4" id="pop12">
+	<p class="title">请选择您想要的礼包：</p>
+	<ul class="bag-list">
+		<li onclick="selectBag(1);" id="option1"><i class="pop-bag1"></i></li>
+		<li class="current" onclick="selectBag(2);" id="option2"><i class="pop-bag2"></i></li>
+		<li onclick="selectBag(3);" id="option3"><i class="pop-bag3"></i></li>
+	</ul>
+	<form>
+		<input type="text" name="name" placeholder="收件人姓名" />
+		<input type="text" name="telephone" placeholder="收件人手机号" />
+		<input type="text" name="address" placeholder="收件人地址" />
+	</form>
+	<button class="obtain"></button>
+</div>
+<script>
+//pop12的选择礼包事件
+function selectBag(id){
+	$("#option"+id).addClass("current");
+	for(var i=1;i<=3;i++){
+		if(i!=id){
+			$("#option"+i).removeClass("current");
+		}
+	}
+}
+</script>
+</body>
+</html>

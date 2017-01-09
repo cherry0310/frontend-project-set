@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单详情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="wrapper order-details">
+	<!--details-container-->
+	<div class="details-container">
+		<div class="details-header">
+			<img src="images/order-pic.jpg" class="course-pic" />
+			<div class="course-brief">
+				<p class="course-title">让孩子在自己的科学实验室动手做实验</p>
+				<p class="course-price">¥3600</p>	
+			</div>
+		</div>
+		<ul class="details-item">
+			<li class="details-list">
+				<span class="info-left">消费码：5364138</span>
+				<span class="info-right green-color">未使用</span>
+			</li>
+			<li class="details-list">
+				<span class="info-left">可上课次数：4</span>
+				<span class="info-right">有效期至2016-01-24</span>
+			</li>
+		</ul>
+		<p class="details-tip green-color">温馨提醒：使用前请提前1天预约</p>
+	</div>
+	<!--details-company-->
+	<div class="details-company">
+		<div class="company-header">适用商户(7)</div>
+		<ul class="company-item">
+			<li class="company-list">
+				<div class="company-tele">
+					<i class="tele-icon"></i>
+				</div>
+				<div class="company-content">
+					<p class="company-name">吉姆的工场东大中心</p>
+					<p class="company-addr">成贤街234号成贤大厦1906成贤街234号成贤大厦1906</p>
+					<p class="company-distance">
+						<i class="addr-icon"></i>
+						<span class="distance-value">50m</span>
+						<span class="green-color">离你最近</span>
+					</p>
+				</div>
+			</li>
+			<li class="company-list" style="display:none">
+				<div class="company-tele">
+					<i class="tele-icon"></i>
+				</div>
+				<div class="company-content">
+					<p class="company-name">吉姆的工场东大中心</p>
+					<p class="company-addr">成贤街234号成贤大厦1906成贤街234号成贤大厦1906</p>
+					<p class="company-distance">
+						<i class="addr-icon"></i>
+						<span class="distance-value">50m</span>
+						<span class="green-color">离你最近</span>
+					</p>
+				</div>
+			</li>
+			<li class="company-list"  style="display:none">
+				<div class="company-tele">
+					<i class="tele-icon"></i>
+				</div>
+				<div class="company-content">
+					<p class="company-name">吉姆的工场东大中心</p>
+					<p class="company-addr">成贤街234号成贤大厦1906成贤街234号成贤大厦1906</p>
+					<p class="company-distance">
+						<i class="addr-icon"></i>
+						<span class="distance-value">50m</span>
+						<span class="green-color">离你最近</span>
+					</p>
+				</div>
+			</li>
+		</ul>
+		<div class="company-more">查看全部7个适用商户<i class="more-icon"></i></div>
+	</div>
+	<!--end course-company-->
+</div>
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+
+<script>
+$(function(){
+	//使tele-icon垂直居中
+	$(".company-tele").css("line-height",$(".company-list").css("height"));
+	//展开全部
+	$(".company-more").click(function(){
+		$(".company-list").show();
+		$(this).hide();
+    });
+});
+</script>
+</body>
+</html>

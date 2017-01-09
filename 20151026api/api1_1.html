@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>API文档</title> 
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+<script src="http://file2.ci123.com/ast/js/jquery_172.js"></script>
+<style type="text/css">
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font-family:Arial,"Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;font-size:12px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+ul,ol{list-style:none;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+a{text-decoration:none;color:#000;}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+img{border:0;-ms-interpolation-mode:bicubic;}
+/*具体*/
+.page .header{height:64px;background:#373942;}
+.page .title{font-size:30px;color:#fff;font-style:normal;height:64px;line-height:64px;margin-left:100px;}
+.page .nav-tip{height:60px;background:#0182c1;}
+.page .crumbs{height:60px;line-height:60px;margin-left:120px;color:#fff;font-size:14px;}
+.page .crumbs a{text-decoration:none;color:#fff;}
+.page .crumbs a:link,.page .crumbs a:visited{text-decoration:none;}
+.page .crumbs a:hover{text-decoration:underline;}
+.page .container{overflow:hidden;width:1200px;margin:0 auto;padding-top:40px;padding-bottom:40px;}
+.page .sidebar{float:left;width:230px;vertical-align:top;background:#f5f5f5;}
+.page .menu-title{height:60px;line-height:60px;color:#000;border-bottom:1px solid #dedede;font-size:18px;text-indent:10px;}
+.page .menu {text-indent:20px;}
+.page .menu li{height:50px;font-size:14px;padding-top:14px;}
+.page .menu li:hover{cursor:pointer;color:#0089cd;background:#ddedf4;}
+.page .menu li a:hover{color:#0089cd;}
+.page .menu .selected{background:#ddedf4;}
+.page .menu .selected a{color:#0089cd;}
+.page .detail{position:relative;float:left;margin-left:40px;width:710px;}
+.page .detail-title{height:34px;line-height:34px;color:#333;font-size:28px;}
+.page .detail-desc{margin-top:26px;height:24px;line-height:24px;font-size:14px;}
+.page .detail-content{position:relative;}
+.page .detail-content h3{position:relative;margin-top:24px;margin-bottom:10px;padding-top:12px;padding-bottom:12px;font-size:20px;font-weight:normal;text-indent:30px;cursor:pointer;color:#333;border-bottom:1px solid #dedede;-webkit-user-select:none;}
+.page .detail-content h3:hover{background:#dedede;}
+.page .detail-content span{font-size:14px;}
+.page .detail-content .icon-open,.icon-close{position:absolute;top:22px;left:10px;width:0;height:0;border-style:solid;_border-style:solid;border-width:5px;}
+.page .detail-content .icon-open{border-color:#666 transparent transparent transparent;}
+.page .detail-content .icon-close{border-color:transparent transparent transparent #666;}
+.page .sub-table{width:100%;border:1px solid #dedede;table-layout:fixed;}
+.page .sub-table th{border:1px solid #dedede;background:#666;color:#fff;text-align:left;padding:10px;}
+.page .sub-table td{border:1px solid #dedede;padding:10px;font-size:12px;word-break:break-all;word-wrap:break-word;}
+.page .sub-content{width:100%;border:1px solid #dedede;background:#f5f5f5;padding:10px 0 10px;}
+.page .mao-list{position:fixed;top:240px;right:30px;width:180px;}
+.page .mao{position:relative;overflow:hidden;padding:0;margin:0;color:#333;}
+.page .mao .mao-li{padding-left:10px;height:40px;line-height:40px;margin:0;border-left:2px solid #dedede;}
+.page .mao .current{border-left:2px solid #0089cd;}
+.page .mao .current a{color:#0089cd;}
+</style>
+</head> 
+<body> 
+<div class="page">
+	<!--标题-->
+	<div class="header">
+		<h1 class="title">API文档</h1>
+	</div>
+	<!--面包屑导航-->
+	<div class="nav-tip">
+		<div class="crumbs"><a href="doc.html">所有类目</a> > 短信平台API</div>
+	</div>
+	<!--主体部分-->
+	<div class="container">
+		<!--左侧导航-->
+		<div class="sidebar">
+			<p class="menu-title">短信平台API</p>
+			<ul class="menu">
+				<li class="selected" id="li1">
+					<a href="api1_1.html">
+						get
+						<p>单独发送一条短信</p>
+					</a>
+				</li>
+				<li id="li2" >
+					<a href="api1_2.html">
+						taobao.user.seller.get
+						<p>查询卖家用户信息</p>
+					</a>
+				</li>
+				<li id="li3">
+					<a href="api1_3.html">
+						alibaba.wholesale.user.get
+						<p>获取用户信息</p>
+					</a>
+				</li>			
+			</ul>
+		</div>
+		<!--中间说明-->
+		<div class="detail" id="detail1">
+			<p class="detail-title">get</p>
+			<p class="detail-desc">单独发送一条短信</p>
+			<div class="detail-content">
+				<!--公共参数-->
+				<h3 id="s1" class="sub-title" onclick="showHide(1);"><i class="icon-open"></i>公共参数</h3>
+				<div id="sub1">
+					<span>公共请求参数：</span>
+					<table class="sub-table">
+						<tr>
+							<th width="22%">名称</th>
+							<th width="12%">类型</th>
+							<th width="10%">是否必须</th>
+							<th width="12%">默认值</th>
+							<th width="44%">描述</th>
+						</tr>
+						<tr>
+							<td>apikey</td>
+							<td>XXX</td>
+							<td>必须</td>
+							<td>XXX</td>				
+							<td>文字文字文字文字</td>
+						</tr>
+					</table>
+				</div>
+				<!--请求参数-->
+				<h3 id="s2" class="sub-title" onclick="showHide(2);"><i class="icon-open"></i>请求参数</h3>
+				<div id="sub2">
+					<table class="sub-table">
+						<tr>
+							<th width="22%">名称</th>
+							<th width="12%">类型</th>
+							<th width="10%">是否必须</th>
+							<th width="12%">默认值</th>
+							<th width="44%">描述</th>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>必须</td>
+							<td></td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>必须</td>
+							<td></td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>必须</td>
+							<td></td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+					</table>
+				</div>
+				<!--响应参数-->
+				<h3 id="s3" class="sub-title" onclick="showHide(3);"><i class="icon-open"></i>响应参数</h3>
+				<div id="sub3">
+					<table class="sub-table">
+						<tr>
+							<th width="30%">名称</th>
+							<th width="20%">类型</th>
+							<th width="50%">描述</th>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+						<tr>
+							<td>fields</td>
+							<td>String</td>
+							<td>只返回nick, avatar参数</td>
+						</tr>
+					</table>
+				</div>
+				<!--请求示例-->
+				<h3 id="s4" class="sub-title" onclick="showHide(4);"><i class="icon-open"></i>请求示例</h3>
+				<div id="sub4" class="sub-content">
+					<pre>
+$c = new TopClient;
+$c->appkey = $appkey;
+$c->secretKey = $secret;
+$req = new UserBuyerGetRequest;
+$req->setFields("nick,sex");
+$resp = $c->execute($req, $sessionKey);</pre>
+				</div>
+				<!--响应示例-->
+				<h3 id="s5" class="sub-title" onclick="showHide(5);"><i class="icon-open"></i>响应示例</h3>
+				<div id="sub5" class="sub-content">
+					<pre>
+{
+	"user_buyer_get_response":{
+		"user":{
+			"nick":"hz0799",
+			"sex":"m",
+			"avatar":"http://assets.taobaocdn.com/app/sns/img/default/avatar-120.png"
+		}
+	}
+}</pre>
+				</div>
+				<!--错误码解释-->
+				<h3 id="s6" class="sub-title" onclick="showHide(6);"><i class="icon-open"></i>错误码解释</h3>
+				<div id="sub6">
+					<table class="sub-table">
+						<tr>
+							<th>错误码</th>
+							<th>错误描述</th>						
+						</tr>
+						<tr>
+							<td>XXX</td>
+							<td>XXXXXXXXXXX</td>
+						</tr>
+						
+					</table>
+				</div>	
+				
+				<!--技术客服-->
+				<h3 id="s7" class="sub-title" onclick="showHide(7);"><i class="icon-open"></i>技术客服</h3>
+				<div id="sub7">
+					<table class="sub-table">
+						<tr>
+							<th>客服人员</th>
+							<th>联系方式</th>						
+						</tr>
+						<tr>
+							<td>XXX</td>
+							<td>XXXXXXXXXXX</td>
+						</tr>
+						
+					</table>
+				</div><!--sub7-->		
+			</div>
+		</div>
+		<!--右侧锚点列表-->
+		<div class="mao-list" id="mao-list">			
+			<ul class="mao">
+				<li class="mao-li current" id="mao1"><a href="#s1" onclick="goto(1);">公共参数</a></li>
+				<li class="mao-li" id="mao2"><a href="#s2" onclick="goto(2);">请求参数</a></li>
+				<li class="mao-li" id="mao3"><a href="#s3" onclick="goto(3);">响应参数</a></li>
+				<li class="mao-li" id="mao4"><a href="#s4" onclick="goto(4);">请求示例</a></li>
+				<li class="mao-li" id="mao5"><a href="#s5" onclick="goto(5);">响应示例</a></li>
+				<li class="mao-li" id="mao6"><a href="#s6" onclick="goto(6);">错误码解释</a></li>
+				<li class="mao-li" id="mao7"><a href="#s7" onclick="goto(7);">技术客服</a></li>
+			</ul>		
+		</div>	
+	</div>
+</div>
+<script>
+//中间每个子条目的展开收缩
+function showHide(id){
+	var name=$("#s"+id+" i").attr("class");
+	if(name=="icon-open"){
+		$("#s"+id+" i").attr("class","icon-close");
+	}else{
+		$("#s"+id+" i").attr("class","icon-open");		
+	}
+	var display=$("#sub"+id).css("display");
+	if(display=="none"){
+		$("#sub"+id).css("display","block");
+	}else{
+		$("#sub"+id).css("display","none");
+	}
+}
+
+//锚导航的监听事件
+$(window.document).scroll(function () {
+	var scrolltop = $(document).scrollTop();
+	var s1=$("#s1").offset().top;
+	var s2=$("#s2").offset().top;
+	var s3=$("#s3").offset().top;
+	var s4=$("#s4").offset().top;
+	var s5=$("#s5").offset().top;
+	var s6=$("#s6").offset().top;
+	var s7=$("#s7").offset().top;
+	if(scrolltop<s2){
+		$("#mao1").addClass("current");
+		removeCurrent(1);
+	}else if(scrolltop>=s2&&scrolltop<s3){
+		$("#mao2").addClass("current");
+		removeCurrent(2);
+	}else if(scrolltop>=s3&&scrolltop<s4){
+		$("#mao3").addClass("current");
+		removeCurrent(3);
+	}else if(scrolltop>=s4&&scrolltop<s5){
+		$("#mao4").addClass("current");
+		removeCurrent(4);
+	}else if(scrolltop>=s5&&scrolltop<s6){
+		$("#mao5").addClass("current");
+		removeCurrent(5);
+	}else if(scrolltop>=s6&&scrolltop<s7){
+		$("#mao6").addClass("current");
+		removeCurrent(6);
+	}else{
+		$("#mao7").addClass("current");
+		removeCurrent(7);
+	}
+});
+//锚导航的点击事件
+function goto(id){
+	$("#mao"+id).addClass("current");
+	removeCurrent(id);
+}
+//去除锚导航中除了id之外的current类
+function removeCurrent(id){
+	var maoList=$(".mao-li");
+	for(var i=1;i<=maoList.length;i++){	
+		if(i!=id){
+			$("#mao"+i).removeClass("current");
+		}
+	}
+}
+</script>
+</body> 
+</html>

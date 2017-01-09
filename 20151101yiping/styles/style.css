@@ -1,0 +1,134 @@
+@charset "utf-8";
+html{
+    font-family: "Helvetica Neue", "Microsoft Yahei", Helvetica, STHeiti, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body{
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+}
+dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a, img {
+    -webkit-touch-callout: none;
+}
+a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background: transparent;
+    outline: none;
+    color: #000;
+    -webkit-tap-highlight-color:transparent;
+}
+a:link {color: currentColor;}
+a:visited {color: currentColor;}
+a:hover {color: currentColor;}
+a:active {color: currentColor;}
+img{
+    display: block;
+    border: 0;
+    width: 100%;
+}
+input, button{
+    margin: 0;
+    padding: 0;
+    outline: none;
+/*    font-family: inherit;*/
+    font-weight: inherit;
+    font-size: inherit;
+}
+/*Ò³ÃæÖ÷Ìå*/
+body{
+    margin: 0 auto;
+    font-family: Arial, "Microsoft Yahei";
+    background: #f5f0ec;
+}
+.wrapper{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+}
+/*result-success-fail-common*/
+.result-wrapper .content{
+	background-color:#eee;
+	padding:0 20px;
+}
+.result-wrapper .content .content-info{
+	margin-top:14px;
+	margin-bottom:24px;
+	font-size:14px;
+	line-height:20px;
+	font-weight:bold;
+	color:#686868;
+}
+.result-wrapper .content .content-selections{
+	width:100%;
+	height:36px;
+	margin-bottom:16px;
+}
+.result-wrapper .content .content-selections .selection{
+	height:100%;
+	color:#fff;
+	background-color:#fd6801;
+	font-family: Arial, "Microsoft Yahei";
+	font-size:14px;
+	line-height:36px;
+	font-weight:bold;
+	text-align:center;
+	border-radius:4px;
+	display:inline-block;
+}
+.result-wrapper .content .content-selections .selection a{
+	width:100%;
+}
+
+.result-wrapper .content .content-rights{
+	font-size:14px;
+	margin-bottom:12px;
+	color:#363636;
+	font-weight:bold;
+}
+.result-wrapper .rights-list{
+	width:100%;
+	margin-bottom:45px;
+}
+.result-wrapper .rights-list img{
+	width:100%;
+}
+/*success*/
+.result-wrapper .content .content-selections .selection1{
+	width:50%;
+}
+.result-wrapper .content .content-selections .selection2{
+	width:40%;
+	margin-left:4%;
+}
+/*fail*/
+.result-wrapper .content .content-info .orange{
+	color:#fd6801;
+}
+.result-wrapper .content .continue-shop{
+	width:90%;
+	margin:0 5%;
+}
+
+
